@@ -5,10 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <p>Test</p> 
-    <p>Hello</p>   
+    <main>
+        <div id="heading" class="heading">
+            <img class="about-image" src="images/logo/logo.png" alt="Businessman">
+            <h1>Want to be your own boss?</h1>
+            <p class="heading-text">Start today and make up to $30/hr driving your own vehicle with Dash!</p>
+        </div>
+        <div class="scooter">
+            <img src="images/bg-image/scooter.svg" alt="scooter">
+        </div>
+        <div id="contact" class="contact">
+            <form id="contact-form" class="contact-form">
+                <h2 class="section-title">Apply Now</h2>
+                <p class="section-text">Enter your info below.</p>
+                <div class="contact-form-section">
+                    <input class="contact-form-input" type="text" value="First name">
+                </div>
+                <div class="contact-form-section">
+                    <input class="contact-form-input" type="text" value="Last name">
+                </div>
+                <div class="contact-form-section">
+                    <input class="contact-form-input" type="text" value="Phone number">
+                </div>
+                <div class="contact-form-section">
+                    <input class="contact-form-input" type="text" placeholder="Email Address">
+                </div>
+                <fieldset>
+                    <label for="spam">
+                    <input type="checkbox" name="terms" id="terms" value="yes"> I agree to dash terms
+                </label>
+              </fieldset>
+              <button type="submit">DRIVE WITH US</button>
+              <p class="apply">Already applied? <div class="red-text">Check your application status here</div></p>
+            </form>
+        </div>
+    </main>
+    <footer id="footer" class="footer">
+        <h1>See how much you can earn with Dash.</h1>
+        <p>how many hours do you want to drive with us this week?</p>
+        <form id="calculater" class="calculater">
+            <div class="calculater-form-section">
+              <input class="calculater-form-input" type="text" value="Hours">
+            </div>
+            <div class="calculater-form-section">
+              <input class="calculater-form-input" type="text" value="City">
+            </div>
+            <button type="submit">CALCULATE</button>
+          </form>
+    </footer>
 </body>
 </html>
