@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <main>
+        <!-- within the main section, I devided the content up into divs with classes and id's.  
+            the divs are as follows: heading(the logo, heading and body text), scooter (the svg) 
+            and contact(the contact form).  -->
         <div id="heading" class="heading">
-            <img class="about-image" src="images/logo/logo.png" alt="Businessman">
+            <img class="logo-image" src="images/logo/logo.png" alt="Businessman">
             <h1>Want to be your own boss?</h1>
             <p class="heading-text">Start today and make up to $30/hr driving your own vehicle with Dash!</p>
         </div>
@@ -19,31 +22,39 @@
             <img src="images/bg-image/scooter.svg" alt="scooter">
         </div>
         <div id="contact" class="contact">
+            <!-- Inside of the contact div, I created a form with child divs, seperating each form item. 
+                I orginized it this way so I could easly target inividual content.-->
             <form id="contact-form" class="contact-form">
                 <h2 class="section-title">Apply Now</h2>
                 <p class="section-text">Enter your info below.</p>
                 <div class="contact-form-section">
-                    <input class="contact-form-input" type="text" value="First name">
+                    <input class="contact-form-input" type="text" placeholder="First name">
                 </div>
                 <div class="contact-form-section">
-                    <input class="contact-form-input" type="text" value="Last name">
+                    <input class="contact-form-input" type="text" placeholder="Last name">
                 </div>
                 <div class="contact-form-section">
-                    <input class="contact-form-input" type="text" value="Phone number">
+                    <input class="contact-form-input" type="text" placeholder="Phone number">
                 </div>
                 <div class="contact-form-section">
                     <input class="contact-form-input" type="text" placeholder="Email Address">
                 </div>
+                <!-- Below is the fieldset which contains the checkbox. -->
                 <fieldset>
-                <label class="label" >
-                    <input type="checkbox" name="terms" id="terms" value="yes"> I agree to dash terms
-                </label>
-              </fieldset>
-              <button type="submit">DRIVE WITH US</button>
-              <p class="apply">Already applied? <div class="red-text">Check your application status here</div></p>
+                    <label class="label" >
+                        <input type="checkbox" name="terms" id="terms" value="yes"> I agree to dash terms
+                    </label>
+                </fieldset>
+                <!-- Below this is the submit button and then a div, holding the call to action text, 
+                    part of which is red text  -->
+                <button type="submit">DRIVE WITH US</button>
+                <div class="apply-text">
+                    <p class="apply">Already applied? &nbsp; <div class="red-text"> Check your application status here</div></p>
+                </div>
             </form>
         </div>
     </main>
+    <!-- I made a class for the footer, inside the footer I made a form with its on little children and I created a div to hold the social media icons.  -->
     <footer id="footer" class="footer">
         <h1>See how much you can earn with Dash.</h1>
         <p>how many hours do you want to drive with us this week?</p>
