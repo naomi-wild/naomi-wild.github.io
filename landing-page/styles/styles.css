@@ -177,7 +177,7 @@ I targeted the same sort of things as the text boxes above.  */
 
 .footer p {
     padding: 1.5em 0;
-    font-weight: 18px;
+    font-size: 18px;
     line-height: 1.2rem;
 }
 
@@ -278,7 +278,7 @@ I used grid to lay out the individual text fields. */
     }
 
     .contact  {
-        padding: 0 auto;
+        padding: 0px;
         padding-bottom: 50px;   
     }
 
