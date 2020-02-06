@@ -242,10 +242,12 @@ I used grid to lay out the individual text fields. */
 
 /* This is where the tablet view starts  */
 @media (min-width: 650px) {
+    
     main {
         margin: 20px 10%;
     }
 
+    /* I updated the text size and spacing to look right on tablet */
     .heading h1{
         font-size: 80px;
         line-height: 6.5rem;
@@ -257,7 +259,8 @@ I used grid to lay out the individual text fields. */
         margin-top: 20px;
     }
 
-    /* form section  */
+    /* form section - I updated the font and white space around it 
+    for the title and the rest of the form text.  */
     .section-title {
         font-size: 40px;
         margin: auto;
@@ -275,11 +278,12 @@ I used grid to lay out the individual text fields. */
     }
 
     .contact  {
-        /* margin: 0 auto; */
         padding: 0 auto;
         padding-bottom: 50px;   
     }
 
+    /* Footer section - I adjusted the footer margen and then adjusted 
+    the form grid to fit tablet view.  */
     .footer {
         padding-left: 4rem;
     }
@@ -304,13 +308,15 @@ I used grid to lay out the individual text fields. */
     #footer .social {
         padding: 10px 32%;
         padding-bottom: 25px;  
-        } 
-
+    } 
 }
 
+/* Desktop breakpoint  */
 @media (min-width: 900px) {
     
-    /* grid on the three main divs  */
+    /* grid with 12 columns on the three main div.  
+    This gave me space to lay out the heading, svg 
+    and contact-form divs to overlay with each other.  */
     main {
         /* height: 75vh; */
         margin: 2% 5%;
@@ -329,6 +335,7 @@ I used grid to lay out the individual text fields. */
         padding-bottom: 5%;
     }
 
+    /* I did a bit of editing to the text for desktop view  */
     .heading h1{
         font-size: 55px;
         line-height: 4.5rem;
@@ -346,6 +353,8 @@ I used grid to lay out the individual text fields. */
         grid-row: 1;
     }
 
+    /* I set the contact form height to 590px because thats what it was in the XD file.  
+    I also changed the sizing of things within the form just to work with desktop. */
     .contact {
         height: 590px;
         margin-top: 7rem;
@@ -371,9 +380,9 @@ I used grid to lay out the individual text fields. */
         font-size: 12px;
     }
 
-    /* footer section  */
+    /* footer section - in this section I adjusted the grid 
+    to have the footer form and the social icons in line.   */
     .footer {
-        /* height: 25vh; */
         padding-left: 3rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -405,3 +414,4 @@ I used grid to lay out the individual text fields. */
     }
 
 }
+
