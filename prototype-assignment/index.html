@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm-final</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="nav-logo">
@@ -12,7 +13,7 @@
             <img class="logo-image" src="images/logo.svg" alt="ARC Logo">
         </div>
         <nav>
-            <ul>
+            <ul class="nav">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Content</a></li>
@@ -20,31 +21,21 @@
         </nav>
     </header>
     <main>
-        <div class="head-info">
+        <div class="head-info" id="head-info">
             <h1>Discover Your ARC.</h1>
             <p>With Algonquin College's newest facility, there's always 
                 something for everyone to discover and enjoy!</p>
         </div>
-        <div class="active-icons">
-            <figure>
-<<<<<<< HEAD
-                <img src="images/icons/bowling.png" alt="bowling">
-                <figcaption>Bowling</figcaption>
-                <img src="images/icons/climbing.png" alt="climbing">
-                <figcaption>Rock Climbing</figcaption>
-                <img src="images/icons/fitness.png" alt="fitness center">
-                <figcaption>Fitness Center</figcaption>
-                <img src="images/icons/basketball.png" alt="indoor court">
-=======
-                <img src="https://via.placeholder.com/150" alt="bowling">
-                <figcaption>Bowling</figcaption>
-                <img src="https://via.placeholder.com/150" alt="climbing">
-                <figcaption>Rock Climbing</figcaption>
-                <img src="https://via.placeholder.com/150" alt="fitness center">
-                <figcaption>Fitness Center</figcaption>
-                <img src="https://via.placeholder.com/150" alt="indoor court">
->>>>>>> 53b3fa8d1d7999e53db424662ad6be576f87f328
-                <figcaption>Indoor Court</figcaption>
+        <div class="active">
+            <figure class="active-icons">
+                <img class="box-1" src="images/icons/bowling.png" alt="bowling">
+                <figcaption class="box-2">Bowling</figcaption>
+                <img class="box-3" src="images/icons/climbing.png" alt="climbing">
+                <figcaption class="box-4">Rock Climbing</figcaption>
+                <img class="box-5" src="images/icons/fitness.png" alt="fitness center">
+                <figcaption class="box-6">Fitness Center</figcaption>
+                <img class="box-7" src="images/icons/basketball.png" alt="indoor court">
+                <figcaption class="box-8">Indoor Court</figcaption>
             </figure>
         </div>
         <div class="btn start-btn">
@@ -54,21 +45,35 @@
             <img src="images/discover.svg" alt="girl reading">
         </div>
     </main>
-    <div class="discover-1">
-        <div class="school-img">
-            <img src="images/school.jpg" alt="school">
+        <div class="discover-1">
+            <div class="school-img">
+                <picture>
+                    <source srcset="images/school-325_x_200.jpg 325w,
+                    images/school-360_x_200.jpg 360w,
+                    images/school-411_x_200.jpg 411w"
+                    media="(max-width: 700px)">
+  
+                    <source srcset="images/museum-1280_x_1280.jpg 12800w,
+                    images/museum-1440_x_1440.jpg 1440w"
+                    media="(min-width: 960px)"
+                    size="50vw">
+            
+  
+                    <img src="images/museum.jpg" alt="placeholder">
+                </picture>
+            </div>
         </div>
         <div class="copy">
-            <h2>Discover.</h2>
+            <h1>Discover.</h1>
             <h2>Algonquin College</h2>
             <p>of Applied Arts and Technology is a publicly funded 
                 English-language college located in Ottawa, Ontario, 
                 Canada. The college serves the National Capital Region 
                 and the outlying areas of Eastern Ontario, Western Quebec, 
                 and Upstate New York.</p>
-                <div class="btn more-btn">
-                    Learn More
-                </div>
+            <div class="btn more-btn">
+                Learn More
+            </div>
         </div>
     </div>
     <aside class="bio">
@@ -110,13 +115,11 @@
             <img src="images/icons/twitter.svg" alt="twitter">
             <img src="images/icons/youtube.svg" alt="youtube">
         </div>
-<<<<<<< HEAD
-        <div class="back-top" id="back-top">
-            <img src="images/icons/arrow.svg" alt="arrow">
-            <p>back to top</p>
-        </div>
-=======
->>>>>>> 53b3fa8d1d7999e53db424662ad6be576f87f328
+        <button>
+            <a href="#head-info">back to top
+                <img src="images/icons/arrow.svg" alt="arrow">
+            </a> 
+        </button>
     </footer>
 </body>
 </html>
