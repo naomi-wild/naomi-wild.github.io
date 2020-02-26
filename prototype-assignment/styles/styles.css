@@ -60,17 +60,19 @@ body {
     font-family: 'Raleway';
 }
 
+/* this is the header accross all pages */
 header {
     background: #3C3B3A;
 }
 
+/* this is the ARC logo on all pages, I centered it and brought down the size */
 .logo-image {
     width: 88px;
     display: block;
     margin: auto;
 }
 
-/* nav */
+/* nav: the nave is stacked with space between all page names*/
 nav ul li a {
     text-align: center; 
     padding: 15px 0;
@@ -79,37 +81,43 @@ nav ul li a {
     font-size: 16px;
 }
 
+/* I took out the defalt text decor and changed the color for the link and visited */
 nav ul li a:link,
 nav ul li a:visited {
     text-decoration: none;
-    color: white;
+    color: #f2f2f2;
 }
 
+/* I made the font bold for when you hover over and click on a menu item */
 nav ul li a:hover,
 nav ul li a:active {
-    color: white;
+    color: #f2f2f2;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* this is the base styling on the main section */
 main, .copy {
     margin: 35px 39px;
     color: #3C3B3A;
 }
 
+/* this styles the h1 of the top section on each page  */
 .head-info h1, .about-top h1, .contact-top h1 {
     font-size: 40px;
-    font-weight: 800;
+    font-weight: bolder;
     padding-bottom: 30px;
     line-height: 45pt;
 }
 
+/* This is the text styling on all p tags on a white background */
 .head-info p, .copy p, .copy-pub p, .about-top p, .who p, .lounge p, .bowling p, .fitness p, .climbing p, .contact-top p {
     font-size: 20px;
     line-height: 30pt;
     padding-bottom: 30px;
 }
 
+/* these are the active icons, I put them in a grid. */
 .active .active-icons{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -147,18 +155,21 @@ main, .copy {
     grid-row: 4 / span 1;
 }
 
+/* This styling is to center the icons and add space between them */
 .active-icons img {
     display: block;
     margin: auto;
     padding-bottom: 10px;
 }
 
+/* This is for the icon captions, I addedthe color and spacing */
 figcaption {
     text-align: center;
     color: #26A682;
     padding-bottom: 20px;
 }
 
+/* this is the start button, I set the size and added color, I also put a border radius on it and a dropshadow */
 .start-btn {
     width: 100%;
     height: 50%;
@@ -174,6 +185,7 @@ figcaption {
     box-shadow: 0 5px 10px rgba(18, 74, 58, 50%)
 }
 
+/* This section is the styling on all the drawn images (except the school one), I set a size and centered it */
 .reading-img img, .construction-img img, .social-img img {
     padding-top: 30px;
     width: 100%;
@@ -181,11 +193,13 @@ figcaption {
     margin: auto;
 }
 
+/* this is for the school drawn image, it has no padding on top */
 .school-img picture {
     width: 100%;
     display: block;
   }
 
+/* this styling is specifically for h1's that are in italics, across all pages. */
 .copy h1, .copy-pub h1 {
     font-size: 32px;
     font-style: italic;
@@ -193,12 +207,14 @@ figcaption {
     line-height: 47pt;
 }
 
+/* this styling is on all the h2s (subheadings) that are green*/
 .copy h2, .copy-pub h2, .lounge h2, .bowling h2, .fitness h2, .climbing h2 {
     font-size: 24px;
     padding-bottom: 10px;
     color: #26A682;
 }
 
+/* this is the styling on the "learn more" buttons they have the same styling as the "get started" button, except that they are only half the width of the page and the text is slightly smaller. */
 .more-btn {
     width: 50%;
     height: 45px;
@@ -216,6 +232,7 @@ figcaption {
     left: 50%;
 }
 
+/* this is the section with Simon's bio */
 .simon, .bio-copy {
     background: #3C3B3A;
 }
@@ -224,6 +241,7 @@ figcaption {
     padding-top: 32px;
 }
 
+/* this is the round profile image, it has a border and a border radius */
 .simon img{
     width: 175px;
     border-radius: 50%;
@@ -231,6 +249,7 @@ figcaption {
     display: block;
     margin: auto;
 }
+
 
 .bio-copy h2{
     text-align: center;
@@ -468,6 +487,7 @@ footer button a:active {
 
 .map iframe {
     width: 100%;
+    display: block;
 }
 
 
