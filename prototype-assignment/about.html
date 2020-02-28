@@ -43,10 +43,10 @@
                 images/about-411_x_200.jpg 411w"
                 media="(max-width: 700px)">
 
-                <source srcset="images/museum-1280_x_1280.jpg 12800w,
-                images/museum-1440_x_1440.jpg 1440w"
-                media="(min-width: 960px)"
-                size="50vw">
+                <source srcset="images/about-700_x_200.jpg 700w,
+                images/about-750_x_200.jpg 750w,
+                images/about-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
                 <img src="images/about.jpg" alt="about">
             </picture>
             <h1>About</h1>
@@ -80,18 +80,28 @@
                 images/services-411_x_200.jpg 411w"
                 media="(max-width: 700px)">
 
-                <source srcset="images/museum-1280_x_1280.jpg 12800w,
-                images/museum-1440_x_1440.jpg 1440w"
-                media="(min-width: 960px)"
-                size="50vw">
+                <source srcset="images/services-700_x_200.jpg 700w,
+                images/services-750_x_200.jpg 750w,
+                images/services-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
                 <img src="images/services.jpg" alt="about">
             </picture>
             <h1>Service</h1>
         </div>
         <div class="lounge">
-            <h1>Need a break?</h1>
-            <h2>Restaurant & Lounge </h2>
-            <p>will have full service throughout the day. Why not come in 
+            <picture class="lounge-img">
+                <source srcset="images/bar-218_x_375.jpg 218w,"
+                media="(min-width: 700px)">
+
+                <source srcset="images/services-700_x_200.jpg 700w,
+                images/services-750_x_200.jpg 750w,
+                images/services-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
+                <img src="images/bar.jpg" alt="about">
+            </picture>
+            <h1 class="lounge-h1">Need a break?</h1>
+            <h2 class="lounge-h2">Restaurant & Lounge </h2>
+            <p class="lounge-p">will have full service throughout the day. Why not come in 
                 after a long day of class and order one of our famous poutines. 
                 Finished with your food and drink? Why not try out the new 
                 billiards area. Grab some friends and dominate them in some pool. 
@@ -99,9 +109,19 @@
                 new bowling lanes! </p>
         </div>
         <div class="bowling">
-            <h1>Competitive Friends?</h1>
-            <h2>Bowling lanes</h2>
-            <p>are finally here. Grab your friends and book a lane at the Students’ 
+            <picture class="bowling-img">
+                <source srcset="images/bowling-218_x_375.jpg 218w,"
+                media="(min-width: 700px)">
+
+                <source srcset="images/services-700_x_200.jpg 700w,
+                images/services-750_x_200.jpg 750w,
+                images/services-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
+                <img src="images/bowling.jpg" alt="about">
+            </picture>
+            <h1 class="bowling-h1">Competitive Friends?</h1>
+            <h2 class="bowling-h2">Bowling lanes</h2>
+            <p class="bowling-p">are finally here. Grab your friends and book a lane at the Students’ 
                 Association Bowling Lanes that will be part of the upcoming ARC! 
                 Don't like bowling? Well, look no further. Practice your swing no 
                 matter the weather on the Golf Simulator that will be located in 
@@ -114,18 +134,38 @@
             </div>
         </div>
         <div class="fitness">
-            <h1>New year, new me.</h1>
-            <h2>Fitness rooms</h2>
-            <p>Cardio equipment, free weights, selectorized weight equipment and 
+            <picture class="fitness-img">
+                <source srcset="images/fitness-218_x_375.jpg 218w,"
+                media="(min-width: 700px)">
+
+                <source srcset="images/services-700_x_200.jpg 700w,
+                images/services-750_x_200.jpg 750w,
+                images/services-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
+                <img src="images/fitness.jpg" alt="about">
+            </picture>
+            <h1 class="fitness-h1">New year, new me.</h1>
+            <h2 class="fitness-h2">Fitness rooms</h2>
+            <p class="fitness-p">Cardio equipment, free weights, selectorized weight equipment and 
                 stretching areas will be located in strategically placed locations 
                 to best suit your work-out routine. Indoor walking/running track 
                 that will test your endurance with inclines and declines that weave 
                 around fitness nods, the gymnasiums and the lounge area.</p>
         </div>
         <div class="climbing">
-            <h1>Indoor climbing?</h1>
-            <h2>Rock climbing</h2>
-            <p>Test your strength and flexibility on the rock-climbing wall. Add 
+            <picture class="climbing-img">
+                <source srcset="images/climbing-218_x_375.jpg 218w,"
+                media="(min-width: 700px)">
+
+                <source srcset="images/services-700_x_200.jpg 700w,
+                images/services-750_x_200.jpg 750w,
+                images/services-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
+                <img src="images/climbing.jpg" alt="about">
+            </picture>
+            <h1 class="climbing-h1">Indoor climbing?</h1>
+            <h2 class="climbing-h2">Rock climbing</h2>
+            <p class="climbing-p">Test your strength and flexibility on the rock-climbing wall. Add 
                 some variety to your fitness routine, the ARC will be able to offer 
                 more yoga and fitness classes to fit into your busy schedule. After 
                 a busy day of rock climbing or yoga, come and enjoy our new massage 
@@ -148,16 +188,17 @@
         </div>
     </div>
     <footer>
-        <h1>Follow us</h1>
+        <h1 class="follow">Follow us</h1>
         <div class="social">
             <img src="images/icons/facebook.svg" alt="facebook">
             <img src="images/icons/instagram.svg" alt="instagram">
             <img src="images/icons/twitter.svg" alt="twitter">
             <img src="images/icons/youtube.svg" alt="youtube">
         </div>
-        <button>
-            <a href="#about-top">back to top
+        <button class="top-arrow">
+            <a href="#head-info">
                 <img src="images/icons/arrow.svg" alt="arrow">
+                back to top
             </a> 
         </button>
     </footer>

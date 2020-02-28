@@ -105,7 +105,7 @@ main, .copy {
 /* this styles the h1 of the top section on each page  */
 .head-info h1, .about-top h1, .contact-top h1 {
     font-size: 40px;
-    font-weight: bolder;
+    font-weight: bold;
     padding-bottom: 30px;
     line-height: 45pt;
 }
@@ -193,6 +193,11 @@ figcaption {
     margin: auto;
 }
 
+.scroll-btn {
+    display: none;
+}
+
+
 /* this is for the school drawn image, it has no padding on top */
 .school-img picture {
     width: 100%;
@@ -233,11 +238,10 @@ figcaption {
 }
 
 /* this is the section with Simon's bio */
-.simon, .bio-copy {
-    background: #3C3B3A;
-}
+
 
 .simon {
+    background-color: #3C3B3A;
     padding-top: 32px;
 }
 
@@ -251,7 +255,7 @@ figcaption {
 }
 
 
-.bio-copy h2{
+.simon h2{
     text-align: center;
     font-size: 24px;
     font-weight: 175;
@@ -260,7 +264,7 @@ figcaption {
     padding-top: 35px;
 }
 
-.bio-copy p {
+.simon p {
     font-size: 20px;
     line-height: 30pt;
     padding: 35px 39px;;
@@ -279,39 +283,50 @@ figcaption {
 footer {
     background: #3C3B3A;
     padding: 35px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-footer h1 {
+footer .follow {
     font-size: 24px;
     color: #F2F2F2;
     text-align: center;
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
 }
 
-.social {
-    display: flex;
-    justify-content: space-evenly;
+footer .social {
+    padding: unset;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 1;
     flex-direction: row;
-    padding: 13px 90px;
+    margin: auto;
 }
 
-footer button {
+footer .social img {
+    padding: 2px 3px;
+}
+
+footer .top-arrow {
     background-color: unset;
     border: unset;
     text-align: center;
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 2;
 }
 
-footer button img {
+footer .top-arrow img {
     width: 22px;
 }
 
-footer button a:link,
-footer button a:visited {
+footer .top-arrow a:link,
+footer .top-arrow a:visited {
     text-decoration: none;
     color: white;
 }
 
-footer button a:hover,
-footer button a:active {
+footer .top-arrow a:active {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -331,7 +346,7 @@ footer button a:active {
 .about-img h1, .services-img h1{
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 40%;
     color: #F2F2F2;
     font-size: 50px;
     font-weight: bold;
@@ -346,6 +361,10 @@ footer button a:active {
     font-weight: 600;
     font-style: italic;
     padding-bottom: 12px;
+}
+
+.lounge-img {
+    display: none;
 }
 
 .lounge, .fitness {
@@ -367,6 +386,7 @@ footer button a:active {
 }
 
 .subscribe p {
+    text-align: center;
     padding-bottom: 35px;
 }
 
@@ -426,7 +446,7 @@ footer button a:active {
     font-size: 40px;
     color: #F2F2F2;
     font-weight: bold;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
 
 .submit {
@@ -450,10 +470,10 @@ footer button a:active {
     border-radius: 40pc;
     border: unset;
 	background:#F4F4F5;
-	margin: 0 0 20px;
-    padding: 15px 15px;
+	margin: 9px 0 18px;
+    padding: 15px 22px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #3C3B3A;
     font-weight: normal;
 }
@@ -464,10 +484,11 @@ footer button a:active {
     border-radius: 10px;
     border: unset;
 	background:#F4F4F5;
-	margin: 0 0 20px;
-    padding: 15px 15px;
+	margin: 9px 0 18px;
+    padding: 10px 22px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    color: #3C3B3A;
 }
 
 .location-info {
@@ -488,6 +509,364 @@ footer button a:active {
 .map iframe {
     width: 100%;
     display: block;
+}
+
+
+/* tablet view */
+@media (min-width: 700px) {
+    .nav-logo {
+        padding: 2px 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .logo-image {
+        width: 80px;
+        margin: unset;
+        grid-column: 1, span 1;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        grid-column: 2, span 1;
+    }
+
+    nav ul li a {
+        text-align: end;
+        font-size: 18px;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    main, .copy {
+        margin: 95px 80px 35px 80px;
+    }
+
+    .head-info h1, .about-top h1, .contact-top h1 {
+        font-size: 72px;
+        font-weight: bolder;
+        padding-bottom: 30px;
+        line-height: 85pt;
+    }
+    
+    .head-info p, .copy p, .copy-pub p, .about-top p, .who p, .lounge p, .bowling p, .fitness p, .climbing p, .contact-top p {
+        font-size: 24px;
+        line-height: 30pt;
+    }
+    
+        /* these are the active icons, I put them in a grid. */
+    .active .active-icons{
+        display: grid;
+        grid-template-columns: repeat(4, 155px);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: flex-start;
+    }
+
+    .active-icons .box-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .active-icons .box-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .active-icons .box-3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .active-icons .box-4 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .active-icons .box-5 {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .active-icons .box-6 {
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .start-btn {
+        width: 300px;
+        height: 65px;
+        font-size: 40px;
+        margin: auto;
+        padding: 12px;
+    }
+
+    .scroll-btn {
+        padding-top: 35px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .scroll-btn img {
+        transform: rotate(180deg);
+    }
+
+    .school-img img {
+        width: 100%;
+    }
+
+    .copy {
+        margin: 50px 80px;
+    }
+
+    .copy h1, .copy-pub h1 {
+        font-size: 40px;
+        line-height: 47pt;
+    }
+    
+    .copy h2, .copy-pub h2, .lounge h2, .bowling h2, .fitness h2, .climbing h2 {
+        font-size: 32px;
+        padding: 25px 0;
+    } 
+
+    .more-btn {
+        width: 230px;
+        font-size: 25px;
+        padding: 10px;
+        position: relative;
+        left: 60%;
+    }
+
+    .bio {
+        background-color: #3c3b3a;
+        
+    }
+
+    .simon {
+        padding: 50px 80px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 30px);
+    }
+
+    .bio-1 {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+    }
+
+    .simon h2 {
+        font-size: 22px;
+    }
+
+    .bio-2 {
+        grid-column: 1 / span 3;
+        grid-row: 7 / span 2;
+    }
+
+    .bio-3 {
+        align-self: end;
+        grid-column: 1 / span 3;
+        grid-row: 8 / span 2;
+    }
+
+    .simon p {
+        line-height: 27pt;
+        padding: unset;
+    }
+
+    .bio-4 {
+        grid-column: 5 / 11;
+        grid-row: 1 / span 4;
+    }
+
+    .social {
+        padding: 13px 280px;
+    }
+
+    .who {
+        padding: 50px 80px;
+    }    
+
+    .who h1{
+        font-size: 40px;
+    }
+
+    .who p {
+        font-size: 18px;
+        line-height: 35pt;
+    }
+
+    .lounge, .bowling, .fitness, .climbing {
+        padding: 50px 80px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(9, 42px);
+    }
+
+    .lounge-img, .fitness-img {
+        display: block;
+        width: 100%;
+        height: 375px;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+    }
+
+    .lounge-h1, .fitness-h1 {
+        grid-column: 4 / span 4;
+        grid-row: 1 / span 6;
+    }
+
+    .lounge h2, .bowling h2, .fitness h2, .climbing h2{
+        padding: 10px 0;
+    }
+
+    .lounge-h2, .fitness-h2 {
+        grid-column: 4 / span 4;
+        grid-row: 2 / span 1;
+    }
+
+    .lounge p, .bowling p, .fitness p, .climbing p {
+        padding-top: 10px;
+        font-size: 18px;
+    }
+
+    .lounge-p, .fitness-p {
+        grid-column: 4 / span 6;
+        grid-row: 3 / span 3;
+    }
+
+    .lounge-img img, .bowling-img img, .fitness img, .climbing img{
+        height: 375px;
+    }
+
+    .bowling-img, .climbing-img {
+        display: block;
+        width: 100%;
+        height: 375px;
+        grid-column: 6 / span 3;
+        grid-row: 1 / span 1;
+        padding-left: 28px;
+    }
+
+    .bowling-h1, .climbing-h1 {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+    }
+
+    .bowling-h2, .climbing-h2 {
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 1;
+    }
+
+    .bowling-p, .climbing-p {
+        grid-column: 1 / span 5;
+        grid-row: 3 / span 10;
+    }
+
+    .thank-you h1{
+        padding: 35px 140px;
+        font-size: 55px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60pt;
+    }
+    
+    .logo img {
+        padding: 35px 140px;
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+    
+    .logo-sa img {
+        width: 90%;
+    }
+    
+    .logo-cibc img {
+        padding-bottom: 60px;
+    }
+
+    .social-img img {
+        width: 80%;
+    }
+
+    /* contact form starts here */
+    .contact {
+        margin: 25px 45px;
+    }
+
+    .contact .contact-form {
+        max-width: 90%;
+    }
+
+    .contact .contact-form .section-title {
+        font-size: 70px;
+    }
+
+    .submit {
+        width: 210px;
+        height: 65px;
+        font-size: 40px;
+        position: relative;
+        left: 65%;
+    }
+
+    .contact-form label {
+        font-size: 24px;
+    }
+
+    #contact input[type="text"] {
+        height: 50px;
+	    margin: 25px 0 25px;
+        padding: 15px 35px;
+        font-size: 16px;
+    }
+
+    #contact textarea[name="message"] {
+        height: 148px;
+	    margin: 25px 0 30px;
+        padding: 15px 35px;
+        font-size: 16px;
+        color: #3C3B3A;
+    }
+
+    .location-info {
+        margin: 86px 80px 50px;
+    }
+
+    .location-info h1 {
+        font-size: 72px;
+        padding-bottom: 48px; 
+    }
+
+    .location-info h2 {
+        font-size: 40px;
+        line-height: 47pt;
+        padding-bottom: 48px;
+    }
+
+    .location-info p {
+        font-size: 18px;
+    }
+    
+
+    .map iframe{
+        height: 500px;
+    }
+
+
+
+
+
+
+
+
+
+    
+
 }
 
 
