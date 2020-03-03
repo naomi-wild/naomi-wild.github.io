@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="nav-logo">
+    <header class="nav-logo" id="nav-logo">
         <div>
             <img class="logo-image" src="images/logo.svg" alt="ARC Logo">
         </div>
@@ -20,14 +20,14 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="head-content">
         <div class="head-info" id="head-info">
             <h1>Discover Your ARC.</h1>
             <p>With Algonquin College's newest facility, there's always 
                 something for everyone to discover and enjoy!</p>
         </div>
         <div class="active">
-            <figure class="active-icons">
+            <div class="active-icons">
                 <img class="box-1" src="images/icons/bowling.png" alt="bowling">
                 <figcaption class="box-2">Bowling</figcaption>
                 <img class="box-3" src="images/icons/climbing.png" alt="climbing">
@@ -36,9 +36,10 @@
                 <figcaption class="box-6">Fitness Center</figcaption>
                 <img class="box-7" src="images/icons/basketball.png" alt="indoor court">
                 <figcaption class="box-8">Indoor Court</figcaption>
-            </figure>
+            </div>
         </div>
         <div class="btn start-btn">
+            <a href="about.html"></a>
             Get Started
         </div>
         <div class="reading-img"> 
@@ -61,7 +62,12 @@
                     images/school-750_x_200.jpg 750w,
                     images/school-800_x_200.jpg 800w"
                     media="(min-width: 700px)">
-                    <img src="images/school.jpg" alt="school">
+                      
+                    <source srcset="images/school-813_x_337.jpg 813w,
+                    images/school-981_x_407.jpg 981w"
+                    media="(min-width: 1200px)">
+
+                    <img class="img-school" src="images/school.jpg" alt="school">
                 </picture>
             </div>
         </div>
@@ -79,7 +85,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <aside class="bio">
         <div class="simon">
             <img class="bio-1" src="images/simon.jpg" alt="portriat of simon">
@@ -118,9 +124,11 @@
                 coming of the ARC facility, not only will it be providing more space 
                 for the students to study, but it will also be bringing in more room 
                 for late-night entertainment.</p>
+            <div class="btn-more">
                 <div class="btn more-btn">
                     Learn More
                 </div>   
+            </div>
         </div>
     </div>
     <footer>
@@ -131,12 +139,12 @@
             <img src="images/icons/twitter.svg" alt="twitter">
             <img src="images/icons/youtube.svg" alt="youtube">
         </div>
-        <button class="top-arrow">
-            <a href="#head-info">
+        <div class="top-arrow">
+            <a href="#nav-logo">
                 <img src="images/icons/arrow.svg" alt="arrow">
                 back to top
             </a> 
-        </button>
+        </div>
     </footer>
 </body>
 </html>

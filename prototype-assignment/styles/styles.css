@@ -204,6 +204,10 @@ figcaption {
     display: block;
   }
 
+.school-img picture .img-school {
+    width: 100%;
+}
+
 /* this styling is specifically for h1's that are in italics, across all pages. */
 .copy h1, .copy-pub h1 {
     font-size: 32px;
@@ -225,16 +229,18 @@ figcaption {
     height: 45px;
     background-color: rgb(38, 166, 130);
     border-radius: 40pc;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
-    display: inline-block;
     text-align: center;
     color: #F2F2F2;
-    padding: 12px;
+    padding: 14px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(18, 74, 58, 50%); 
-    position: relative;
-    left: 50%;
+}
+
+.btn-more {
+    display: flex;
+    justify-content: end;
 }
 
 /* this is the section with Simon's bio */
@@ -271,7 +277,7 @@ figcaption {
     color: #F2F2F2;
 }
 
-.pub-img picture {
+.pub-img picture img {
     width: 100%;
     display: block;
 }
@@ -311,6 +317,7 @@ footer .social img {
 footer .top-arrow {
     background-color: unset;
     border: unset;
+    font-size: 9px;
     text-align: center;
     grid-column: 5 / span 1;
     grid-row: 1 / span 2;
@@ -337,7 +344,7 @@ footer .top-arrow a:active {
     padding-top: unset;
 }
 
-.about-img, .services-img {
+.about-img img, .services-img img{
     width: 100%;
     position: relative;
     display: inline-block
@@ -363,7 +370,7 @@ footer .top-arrow a:active {
     padding-bottom: 12px;
 }
 
-.lounge-img {
+.lounge-img, .bowling-img, .climbing-img, .fitness-img {
     display: none;
 }
 
@@ -559,9 +566,9 @@ footer .top-arrow a:active {
         /* these are the active icons, I put them in a grid. */
     .active .active-icons{
         display: grid;
-        grid-template-columns: repeat(4, 155px);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        align-items: flex-start;
+  
     }
 
     .active-icons .box-1 {
@@ -590,6 +597,16 @@ footer .top-arrow a:active {
     }
 
     .active-icons .box-6 {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .active-icons .box-7 {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .active-icons .box-8 {
         grid-column: 4 / span 1;
         grid-row: 2 / span 1;
     }
@@ -636,9 +653,8 @@ footer .top-arrow a:active {
         width: 230px;
         font-size: 25px;
         padding: 10px;
-        position: relative;
-        left: 60%;
     }
+
 
     .bio {
         background-color: #3c3b3a;
@@ -810,8 +826,11 @@ footer .top-arrow a:active {
         width: 210px;
         height: 65px;
         font-size: 40px;
-        position: relative;
-        left: 65%;
+    }
+
+    .submit-btn {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .contact-form label {
@@ -857,15 +876,90 @@ footer .top-arrow a:active {
         height: 500px;
     }
 
+}
+
+/* desktop view */
+@media (min-width: 1200px) {
+    .nav-logo {
+        padding: 2px 140px
+    }
+
+    nav ul li a{
+        text-align: end;
+        font-size: 18px;
+        padding-left: 40px;
+    }
+
+    nav ul li a:link,
+    nav ul li a:visited {
+        padding-left: 40px;
+    }
 
 
+    .head-content {
+        margin: 80px 120px;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
 
+    .head-info {
+        grid-column: 1 / span 6;
+        grid-row: 2 / span 4;
+    }
 
+    .head-info h1 {
+        font-size: 60px;
+        line-height: 50pt;
+        padding-bottom: 20px;
+    }
 
+    .head-info p {
+        font-size: 20px;
+        line-height: 25pt;
+    }
 
+    .active {
+        grid-column: 1 / span 5;
+        grid-row: 5 / span 1;
 
+    }
 
+    .active .active-icons figcaption{
+        display: flex;
+        justify-content: flex-start;
+        font-size: 13px;
+        /* padding-right: 8px; */
+    }
+
+    .start-btn {
+        grid-column: 1 / span 4;
+        grid-row: 6 / span 1;
+    }
+
+    .scroll-btn {
+        grid-column: 6 / span 2;
+        grid-row: 7 / span 1;
+    }
+
+    .reading-img {
+        grid-column: 7 / span 9;
+        grid-row: 1 / span 8;  
+    }
+
+    .discover-1 {
+        padding: 80px 120px;
+        background-color: #f2f2f2;
+    }
+
+    .copy {
+        margin: unset;
+        background-color: #f2f2f2;
+        padding: 80px 120px;
+    }
     
+
+
 
 }
 
