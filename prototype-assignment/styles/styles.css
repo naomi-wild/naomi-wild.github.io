@@ -1068,6 +1068,93 @@ footer .top-arrow img {
         justify-content: flex-start;
     }
 
+    .about-top {
+        margin: 80px 120px;
+    }
+
+    .construction-copy {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .con-copy {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        padding-right: 20px;
+    }
+
+    .con-copy h1 {
+        font-size: 65px;
+        line-height: 70pt;
+    }
+
+    .construction-img {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .about-img h1, .services-img h1{
+        font-size: 72px;
+    }
+
+    .who {
+        padding: 140px 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .who1 {
+        grid-column: 1;
+        grid-row: 1;
+        padding-right: 18px;
+    }
+
+    .what {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0 18px;
+    }
+
+    .where {
+        grid-column: 3;
+        grid-row: 1;
+        padding-left: 18px;
+    }
+
+    .contact-top {
+        padding: 80px 120px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .contact-copy {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .contact {
+        width: 100%;
+        margin: unset;
+        grid-column: 4 / span 2;
+        grid-row: 1;
+    }
+
+    footer .top-arrow a {
+        font-size: 16px;
+        right: 25px;
+        top: 35px;
+    }
+    
+    footer .top-arrow img {
+        width: 55px;
+        align-self: center;
+        padding-bottom: 5px;
+    }
+
+
 
 
     
