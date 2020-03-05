@@ -72,6 +72,10 @@ header {
     margin: auto;
 }
 
+.active {
+    font-weight: bold;
+}
+
 /* nav: the nave is stacked with space between all page names*/
 nav ul li a {
     text-align: center; 
@@ -179,10 +183,14 @@ figcaption {
     font-weight: bold;
     display: block;
     text-align: center;
-    color: #F2F2F2;
     padding: 15px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(18, 74, 58, 50%)
+}
+
+.start-btn a {
+    text-decoration: none;
+    color: #F2F2F2;
 }
 
 /* This section is the styling on all the drawn images (except the school one), I set a size and centered it */
@@ -232,10 +240,14 @@ figcaption {
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    color: #F2F2F2;
     padding: 14px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(18, 74, 58, 50%); 
+}
+
+.more-btn a {
+    color: #F2F2F2;
+    text-decoration: none;
 }
 
 .btn-more {
@@ -290,53 +302,50 @@ footer {
     background: #3C3B3A;
     padding: 35px 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    position: relative;
 }
 
 footer .follow {
     font-size: 24px;
     color: #F2F2F2;
     text-align: center;
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 }
 
 footer .social {
     padding: unset;
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     flex-direction: row;
     margin: auto;
+
 }
 
 footer .social img {
     padding: 2px 3px;
 }
 
-footer .top-arrow {
+footer .top-arrow a {
     background-color: unset;
     border: unset;
     font-size: 9px;
     text-align: center;
-    grid-column: 5 / span 1;
-    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    text-decoration: none;
+    color: #F2F2F2;
 }
 
 footer .top-arrow img {
     width: 22px;
-}
-
-footer .top-arrow a:link,
-footer .top-arrow a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-footer .top-arrow a:active {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    align-self: center;
+    padding-bottom: 5px;
 }
 
 /* about page starts here */
@@ -346,14 +355,18 @@ footer .top-arrow a:active {
 
 .about-img img, .services-img img{
     width: 100%;
-    position: relative;
     display: inline-block
+}
+
+.about-img, .services-img {
+    position: relative;
 }
 
 .about-img h1, .services-img h1{
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #F2F2F2;
     font-size: 50px;
     font-weight: bold;
@@ -406,10 +419,14 @@ footer .top-arrow a:active {
     font-weight: bold;
     display: block;
     text-align: center;
-    color: #F2F2F2;
     padding: 12px;
     cursor: pointer;
     margin: auto;
+}
+
+.sub-btn a {
+    color: #F2F2F2;
+    text-decoration: none;
 }
 
 .thank-you h1{
@@ -476,7 +493,7 @@ footer .top-arrow a:active {
     height: 40px;
     border-radius: 40pc;
     border: unset;
-	background:#F4F4F5;
+	background-color:#F4F4F5;
 	margin: 9px 0 18px;
     padding: 15px 22px;
     font-family: 'Montserrat', sans-serif;
@@ -490,12 +507,13 @@ footer .top-arrow a:active {
     height: 100px;
     border-radius: 10px;
     border: unset;
-	background:#F4F4F5;
+	background-color:#F4F4F5;
 	margin: 9px 0 18px;
     padding: 10px 22px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #3C3B3A;
+    resize: none;
 }
 
 .location-info {
@@ -665,7 +683,7 @@ footer .top-arrow a:active {
         padding: 50px 80px;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 30px);
+        grid-template-rows: repeat(10, 2.1rem);
     }
 
     .bio-1 {
@@ -924,13 +942,12 @@ footer .top-arrow a:active {
         grid-row: 5 / span 1;
 
     }
-
+/* 
     .active .active-icons figcaption{
         display: flex;
         justify-content: flex-start;
         font-size: 13px;
-        /* padding-right: 8px; */
-    }
+    } */
 
     .start-btn {
         grid-column: 1 / span 4;
@@ -938,7 +955,7 @@ footer .top-arrow a:active {
     }
 
     .scroll-btn {
-        grid-column: 6 / span 2;
+        grid-column: 7 / span 1;
         grid-row: 7 / span 1;
     }
 
@@ -950,13 +967,75 @@ footer .top-arrow a:active {
     .discover-1 {
         padding: 80px 120px;
         background-color: #f2f2f2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .copy {
-        margin: unset;
-        background-color: #f2f2f2;
-        padding: 80px 120px;
+    .school-img {
+        width: 100%;
+        grid-column: 1 / span 1;
     }
+
+   .copy {
+        grid-column: 2 / span 1;
+        margin: 0 0 0 40px;
+    }
+
+    .copy h2 {
+        padding: 8px 0;
+    }
+
+    .copy p {
+        font-size: 18px;
+    }
+
+    .copy .more-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .simon {
+        padding: 40px 120px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .bio-1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 3;
+    }
+
+    .simon h2 {
+        font-size: 22px;
+    }
+
+    .bio-2 {
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 1;
+        align-self: flex-end;
+    }
+
+    .bio-3 {
+        align-self: end;
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+        align-self: center;
+        padding-bottom: 20px;
+    }
+
+    .simon p {
+        line-height: 27pt;
+        padding: unset;
+    }
+
+    .bio-4 {
+        grid-column: 5 / 11;
+        grid-row: 1 / span 4;
+    }
+
+
+
     
 
 
