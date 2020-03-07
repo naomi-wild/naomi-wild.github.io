@@ -193,6 +193,27 @@ figcaption {
     color: #F2F2F2;
 }
 
+
+/* this is the sart button animation it has a hover state which makes the button larger and the animation makes the button fade in from the left. */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(18, 74, 58, 50%);
+}
+
+.btn:active {
+    transform: translateY(-1px)
+}
+
+/* I named the animation and but the @keyframe at the bottom of the mobile view. */
+.start-btn {
+    animation-name: BottomAnimation;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
 /* This section is the styling on all the drawn images (except the school one), I set a size and centered it */
 .reading-img img, .construction-img img, .social-img img {
     padding-top: 30px;
@@ -272,7 +293,7 @@ figcaption {
     margin: auto;
 }
 
-
+/* these are the styles for the bio copy.  I just changed the size/weight and color to follow the mockup. */
 .simon h2{
     text-align: center;
     font-size: 24px;
@@ -289,15 +310,18 @@ figcaption {
     color: #F2F2F2;
 }
 
+/* this is the pub image  */
 .pub-img picture img {
     width: 100%;
     display: block;
 }
 
+/* this is the copy beside the pub image */
 .copy-pub {
     margin: 35px 39px;
 }
 
+/* these are the footer styles for all pages. The footer is in a grid so i could stack the text and icons.  */
 footer {
     background: #3C3B3A;
     padding: 35px 0;
@@ -307,6 +331,7 @@ footer {
     position: relative;
 }
 
+/* this is the footer copy. */
 footer .follow {
     font-size: 24px;
     color: #F2F2F2;
@@ -315,6 +340,7 @@ footer .follow {
     grid-row: 1 / span 1;
 }
 
+/* the social icons - they have basic styles on them and are in the grid. */
 footer .social {
     padding: unset;
     grid-column: 1 / span 1;
@@ -328,6 +354,7 @@ footer .social img {
     padding: 2px 3px;
 }
 
+/* this is the back to top arrow, it is possitioned on the footer. */
 footer .top-arrow a {
     background-color: unset;
     border: unset;
@@ -349,19 +376,23 @@ footer .top-arrow img {
 }
 
 /* about page starts here */
+/* this is the styling for the construction svg */
 .construction-img img {
     padding-top: unset;
 }
 
+/* these are the green images */
 .about-img img, .services-img img{
     width: 100%;
     display: inline-block
 }
 
+/* this is the container of the copy so i gave it a position of relative. */
 .about-img, .services-img {
     position: relative;
 }
 
+/* this is the copy, positioned on the images. */
 .about-img h1, .services-img h1{
     position: absolute;
     top: 50%;
@@ -372,10 +403,13 @@ footer .top-arrow img {
     font-weight: bold;
 }
 
+/* this is the padding and background for all the about content with white background. */
 .who, .bowling, .climbing {
     padding: 35px 39px;
     background-color: #F2F2F2;
 }
+
+/* this is the who, what, when copy styles. */
 .who h1{
     font-size: 32px;
     font-weight: 600;
@@ -383,6 +417,7 @@ footer .top-arrow img {
     padding-bottom: 12px;
 }
 
+/* these are the images that don't show up till tablet view. */
 .lounge-img, .bowling-img, .climbing-img, .fitness-img {
     display: none;
 }
@@ -391,6 +426,7 @@ footer .top-arrow img {
     padding: 35px 39px;
 }
 
+/* the styling for the h1's of all about sections. */
 .lounge h1, .bowling h1, .fitness h1, .climbing h1, .location-info h1 {
     font-size: 32px;
     font-weight: 600;
@@ -399,6 +435,7 @@ footer .top-arrow img {
     color: #3C3B3A;
 }
 
+/* tjis is the subscribe section that brakes up about content. */
 .subscribe {
     background-color: #3C3B3A;
     padding: 35px 39px;
@@ -534,6 +571,20 @@ footer .top-arrow img {
 .map iframe {
     width: 100%;
     display: block;
+}
+
+
+/* key frames */
+@keyframes BottomAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 
@@ -1153,6 +1204,148 @@ footer .top-arrow img {
         align-self: center;
         padding-bottom: 5px;
     }
+
+
+
+
+
+
+    .lounge, .bowling, .fitness, .climbing {
+        padding: 80px 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 3rem);
+    }
+
+    .lounge-img, .fitness-img {
+        height: unset;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 6;
+    }
+
+    .lounge-h1, .fitness-h1 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .lounge-h2, .fitness-h2 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .lounge-p, .fitness-p {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 4;
+    }
+
+    .bowling-img, .climbing-img {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 6;
+        padding-left: 28px;
+    }
+
+    .bowling-h1, .climbing-h1 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .bowling-h2, .climbing-h2 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .bowling-p, .climbing-p {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 4;
+    }
+
+    .subscribe {
+        padding: 25px 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .sub-p {
+        align-self: center;
+        font-size: 26px;
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+
+    .subscribe p {    
+        padding-bottom: unset;
+    }
+
+    .sub-btn {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+
+    .thank-you {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+
+    .thank-you h1 {
+        font-size: 72px;
+        line-height: 85pt;
+        grid-column: 1 / span 4;
+        grid-row: 1;
+    }
+
+    .logo img{
+        padding: none;
+    }
+
+    .logo-sa {
+        padding: none;
+        width: 100%;
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+
+    .logo-ac img{
+        padding: none;
+        width: 100%;
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+
+    .logo-pcl img{
+        padding: none;
+        width: 100%;
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+
+    .logo-cibc img{
+        padding: none;
+        width: 100%;
+        grid-column: 4 / span 1;
+        grid-row: 2;
+    }
+
+    .map-n-stuff {
+        margin: 80px 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .location-info {
+        margin: unset;
+        grid-columns: 1 / span;
+        grid-rows: 1;
+    }
+
+    .map {
+        grid-columns: 2 / span 1;
+        grid-rows: 1;
+    }
+
 
 
 
