@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- *same across all pages* this is the head, containing all the meta data and links(style sheet and font) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- *same across all pages* header contains the nav bar with the three html pages and the logo -->
     <header class="nav-logo" id="nav-logo">
         <div>
             <img class="logo-image" src="images/logo.svg" alt="ARC Logo">
@@ -20,6 +22,7 @@
             </ul>
         </nav>
     </header>
+   <!-- The main with a class of contact-top contains the copy(in a div), social svg(in a div), and a div with containing the contact form div  -->
     <main class="contact-top">
         <div class="contact-copy">
             <h1>We Want to Hear From You</h1>
@@ -30,24 +33,25 @@
                 <img src="images/contact-img.svg" alt="construction">
             </div>
         </div>
+        <!-- contact form.  This is the contact form with an h2 and then individual divs containing a lavel and input -->
         <div id="contact" class="contact">
             <form id="contact-form" class="contact-form">
                 <h2 class="section-title">Contact Us.</h2>
                 <div class="contact-form-section">
                     <label class="first-last" for="name">Full Name</label>
-                    <input class="contact-form-input" type="text" placeholder="Full Name">
+                    <input class="contact-form-input" id="name" type="text" placeholder="Full Name">
                 </div>
                 <div class="contact-form-section">
                     <label class="student-number" for="lname">Student Number</label>
-                    <input class="contact-form-input" type="text" placeholder="Student Number">
+                    <input class="contact-form-input" id="lname" type="text" placeholder="Student Number">
                 </div>
                 <div class="contact-form-section">
                     <label class="email" for="email">Email</label>
-                    <input class="contact-form-input" type="text" placeholder="Email">
+                    <input class="contact-form-input" id="email" type="text" placeholder="Email">
                 </div>
                 <div>
                     <label for="comment">Message</label>
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <textarea name="message" id="comment" placeholder="Message"></textarea>
                 </div>
                 <div class="submit-btn">
                     <button class="submit" type="submit">submit</button>
@@ -55,10 +59,11 @@
             </form>
         </div>
     </main>
+    <!-- Aside - contains contact info and the map iframe -->
     <aside class="map-n-stuff">
         <div class="location-info">
-            <h1>Our Location.</h1>
-            <h2>Algonquin College Students' Association</h2>
+            <h2>Our Location.</h2>
+            <h3>Algonquin College Students' Association</h3>
             <p>Monday to Friday – 8:30am to 6:00pm</p>
             <p>1385 Woodroffe Avenue (E114)</p>
             <p>Ottawa, Ontario</p> 
@@ -71,6 +76,7 @@
             height="250" style="border:0;"></iframe>
         </div>
     </aside>
+    <!-- *Same across all pages* Footer with an h1 and a div containing all the social media icons. another div with the back to top arrow(an href with an image and text inside-->
     <footer>
         <h1 class="follow">Follow us</h1>
         <div class="social">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- *same across all pages* this is the head, containing all the meta data and links(style sheet and font) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- *same across all pages* header contains the nav bar with the three html pages and the logo -->
     <header class="nav-logo" id="nav-logo">
         <div>
             <img class="logo-image" src="images/logo.svg" alt="ARC Logo">
@@ -20,6 +22,7 @@
             </ul>
         </nav>
     </header>
+    <!-- The main with a class of about-top contains the copy(in a div) and construction svg(in a div)  -->
     <main class="about-top" id="about-top">
         <div class="construction-copy">
             <div class="con-copy">
@@ -37,6 +40,7 @@
             </div>
         </div>
     </main>
+    <!-- This is the about section with the about image the has text over it and the who, what and when copy(all in big div and then in there own divs) -->
     <div class="about">
         <div class="about-img">
             <picture>
@@ -85,9 +89,15 @@
             </div>
         </div>
     </div>
+    <!-- this div with a class of services contains the services image with the text on top and the four services sections with there copy and images -->
     <div class="services">
         <div class="services-img"> 
             <picture>
+                <source srcset="images/services-325_x_200.jpg 325w,
+                images/services-360_x_200.jpg 360w,
+                images/services-411_x_200.jpg 411w"
+                media="(max-width: 700px)">
+
                 <source srcset="images/services-700_x_200.jpg 700w,
                 images/services-750_x_200.jpg 750w,
                 images/services-800_x_200.jpg 800w"
@@ -103,15 +113,10 @@
         </div>
         <div class="lounge">
             <picture class="lounge-img">
-                <source srcset="images/bar-218_x_375.jpg 218w,"
-                media="(min-width: 700px)">
+                <source srcset="images/bar-218_x_375.jpg 218w"
+                media="(max-width: 1200px)">
 
-                <source srcset="images/services-700_x_200.jpg 700w,
-                images/services-750_x_200.jpg 750w,
-                images/services-800_x_200.jpg 800w"
-                media="(min-width: 700px)">
-
-                <source srcset="images/services-813_x_337.jpg 813w"
+                <source srcset="images/bar-813_x_337.jpg 813w"
                 media="(min-width: 1000px)">
                 <img src="images/bar.jpg" alt="about">
             </picture>
@@ -126,13 +131,8 @@
         </div>
         <div class="bowling">
             <picture class="bowling-img">
-                <source srcset="images/bowling-218_x_375.jpg 218w,"
-                media="(min-width: 700px)">
-
-                <source srcset="images/services-700_x_200.jpg 700w,
-                images/services-750_x_200.jpg 750w,
-                images/services-800_x_200.jpg 800w"
-                media="(min-width: 700px)">
+                <source srcset="images/bowling-218_x_375.jpg 218w"
+                media="(max-width: 1200px)">
 
                 <source srcset="images/bowling-813_x_337.jpg 813w"
                 media="(min-width: 1000px)">
@@ -141,11 +141,12 @@
             <h1 class="bowling-h1">Competitive Friends?</h1>
             <h2 class="bowling-h2">Bowling lanes</h2>
             <p class="bowling-p">are finally here. Grab your friends and book a lane at the Students’ 
-                Association Bowling Lanes that will be part of the upcoming ARC! 
+                Assciation Bowling Lanes that will be part of the upcoming ARC! 
                 Don't like bowling? Well, look no further. Practice your swing no 
                 matter the weather on the Golf Simulator that will be located in 
                 the ARC building.</p>
         </div>
+        <!-- this is the subscribe block with a button and some copy -->
         <div class="subscribe">
             <p class="sub-p">Keep up to date with our news letter</p>
             <div class="btn sub-btn">
@@ -154,13 +155,8 @@
         </div>
         <div class="fitness">
             <picture class="fitness-img">
-                <source srcset="images/fitness-218_x_375.jpg 218w,"
-                media="(min-width: 700px)">
-
-                <source srcset="images/services-700_x_200.jpg 700w,
-                images/services-750_x_200.jpg 750w,
-                images/services-800_x_200.jpg 800w"
-                media="(min-width: 700px)">
+                <source srcset="images/fitness-218_x_375.jpg 218w"
+                media="(max-width: 1200px)">
 
                 <source srcset="images/fitness-813_x_337.jpg 813w"
                 media="(min-width: 1000px)">
@@ -177,12 +173,7 @@
         <div class="climbing">
             <picture class="climbing-img">
                 <source srcset="images/climbing-218_x_375.jpg 218w,"
-                media="(min-width: 700px)">
-
-                <source srcset="images/services-700_x_200.jpg 700w,
-                images/services-750_x_200.jpg 750w,
-                images/services-800_x_200.jpg 800w"
-                media="(min-width: 700px)">
+                media="(max-width: 1200px)">
 
                 <source srcset="images/climbing-813_x_337.jpg 813w"
                 media="(min-width: 1000px)">
@@ -197,6 +188,7 @@
                 therapy area. </p>
         </div>
     </div>
+    <!-- this div with the class of thank-you contains the thank-you h1 and sponser images -->
     <div class="thank-you">
         <h1>Special thank you to the following</h1>
         <div class="logo logo-sa">
@@ -212,6 +204,7 @@
             <img src="images/cibc.png" alt="CIBC">
         </div>
     </div>
+<!-- *Same across all pages* Footer with an h1 and a div containing all the social media icons. another div with the back to top arrow(an href with an image and text inside-->
     <footer>
         <h1 class="follow">Follow us</h1>
         <div class="social">

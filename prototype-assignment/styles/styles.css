@@ -167,7 +167,7 @@ main, .copy {
 }
 
 /* This is for the icon captions, I addedthe color and spacing */
-figcaption {
+.box {
     text-align: center;
     color: #26A682;
     padding-bottom: 20px;
@@ -297,7 +297,7 @@ figcaption {
 .simon h2{
     text-align: center;
     font-size: 24px;
-    font-weight: 175;
+    font-weight: 500;
     color: #F2F2F2;
     line-height: 5pt;    
     padding-top: 35px;
@@ -427,7 +427,7 @@ footer .top-arrow img {
 }
 
 /* the styling for the h1's of all about sections. */
-.lounge h1, .bowling h1, .fitness h1, .climbing h1, .location-info h1 {
+.lounge h1, .bowling h1, .fitness h1, .climbing h1 {
     font-size: 32px;
     font-weight: 600;
     padding-bottom: 12px; 
@@ -447,6 +447,7 @@ footer .top-arrow img {
     padding-bottom: 35px;
 }
 
+/* This is the subscribe button, it is has mostly the same styles as the first button with slightly different sizes and alinments. */
 .subscribe .sub-btn {
     width: 50%;
     height: 45px;
@@ -461,17 +462,20 @@ footer .top-arrow img {
     margin: auto;
 }
 
+/* This is the color and style of the text on the button, I made the button a link later in the process so i had to add this bit. */
 .sub-btn a {
     color: #F2F2F2;
     text-decoration: none;
 }
 
+/* this is the message above the sponser logos, it has basic styling. */
 .thank-you h1{
     padding: 35px 39px;
     font-size: 55px;
     font-weight: bold;
 }
 
+/* This targets all the sponser logos at once */
 .logo img {
     padding: 35px 39px;
     width: 70%;
@@ -479,10 +483,12 @@ footer .top-arrow img {
     margin: auto;
 }
 
+/* this targets the students assosiation, it is shaped different from the rest so it needed extra styles. */
 .logo-sa img {
     width: 90%;
 }
 
+/* this is the bottom logo so i added extra padding below */
 .logo-cibc img {
     padding-bottom: 60px;
 }
@@ -492,6 +498,7 @@ footer .top-arrow img {
     margin: 25px 29px;
 }
 
+/* this targets the green box around the form fields. */
 .contact .contact-form {
     margin: 0 auto;
     padding: 8%;
@@ -503,6 +510,7 @@ footer .top-arrow img {
     color: #F2F2F2;
 }
 
+/* this addresses the form title */
 .contact .contact-form .section-title {
     font-size: 40px;
     color: #F2F2F2;
@@ -510,6 +518,7 @@ footer .top-arrow img {
     padding-bottom: 20px;
 }
 
+/* this is the form button */
 .submit {
     width: 100%;
     height: 50px;
@@ -525,6 +534,7 @@ footer .top-arrow img {
     box-shadow: 0 5px 10px rgba(18, 74, 58, 50%)
 }
 
+/* these are the styles for the lables and text fields in the form */
 #contact input[type="text"] {
     width: 100%;
     height: 40px;
@@ -539,6 +549,7 @@ footer .top-arrow img {
     font-weight: normal;
 }
 
+/* this is the messag area. I had to take out some of the pre existing styles and add new ones */
 #contact textarea[name="message"] {
     width: 100%;
     height: 100px;
@@ -553,12 +564,22 @@ footer .top-arrow img {
     resize: none;
 }
 
+/* this is the basic style on the location section*/
 .location-info {
     margin: 35px 39px;
     color: #3C3B3A;
 }
 
 .location-info h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 12px; 
+    line-height: 30pt;
+    color: #3C3B3A;
+}
+
+/* this is the heading and paragrapg in location info */
+.location-info h3 {
     font-size: 24px;
     padding-bottom: 10px;
     line-height: 35px; 
@@ -568,6 +589,7 @@ footer .top-arrow img {
    line-height: 35px; 
 }
 
+/* the map width to fit this breakpoint */
 .map iframe {
     width: 100%;
     display: block;
@@ -590,25 +612,29 @@ footer .top-arrow img {
 
 /* tablet view */
 @media (min-width: 700px) {
+    /* this is the nav container on tablet. I created a grid to put the logo and all the menu items inline  */
     .nav-logo {
         padding: 2px 80px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
     
+    /* the logo image styles to work with tablet. in the left corner now  */
     .logo-image {
         width: 80px;
         margin: unset;
-        grid-column: 1, span 1;
+        grid-column: 1 / span 1;
     }
     
+    /* the nav items in line with flext and grid */
     nav ul {
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
-        grid-column: 2, span 1;
+        grid-column: 2 / span 1;
     }
 
+    /* this is the updated styles on the text to work with tablet view */
     nav ul li a {
         text-align: end;
         font-size: 18px;
@@ -616,10 +642,12 @@ footer .top-arrow img {
         padding-top: 30px;
     }
 
+    /* the main and copy is the body with white background, this is why i groupoed them. this is just margin */
     main, .copy {
         margin: 95px 80px 35px 80px;
     }
 
+    /* the styles for the top headings on all pages */
     .head-info h1, .about-top h1, .contact-top h1 {
         font-size: 72px;
         font-weight: bolder;
@@ -627,17 +655,17 @@ footer .top-arrow img {
         line-height: 85pt;
     }
     
+    /* the p stylings for all common p's */
     .head-info p, .copy p, .copy-pub p, .about-top p, .who p, .lounge p, .bowling p, .fitness p, .climbing p, .contact-top p {
         font-size: 24px;
         line-height: 30pt;
     }
     
-        /* these are the active icons, I put them in a grid. */
+    /* these are the active icons and captions, I put them in a grid. */
     .active .active-icons{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-  
     }
 
     .active-icons .box-1 {
@@ -680,6 +708,7 @@ footer .top-arrow img {
         grid-row: 2 / span 1;
     }
 
+    /* This is the start button with slightly  */
     .start-btn {
         width: 300px;
         height: 65px;
@@ -688,6 +717,7 @@ footer .top-arrow img {
         padding: 12px;
     }
 
+    /* this is the scroll button with basic styling to center it */
     .scroll-btn {
         padding-top: 35px;
         display: grid;
@@ -696,10 +726,12 @@ footer .top-arrow img {
         line-height: 30px;
     }
 
+    /* I used transform to make the arrow point down */
     .scroll-btn img {
         transform: rotate(180deg);
     }
 
+    /* this is the school svg */
     .school-img img {
         width: 100%;
     }
@@ -708,16 +740,19 @@ footer .top-arrow img {
         margin: 50px 80px;
     }
 
+    /* size and line hight on the h1's in about */
     .copy h1, .copy-pub h1 {
         font-size: 40px;
         line-height: 47pt;
     }
     
+    /* styling for all the h2's in the about page */
     .copy h2, .copy-pub h2, .lounge h2, .bowling h2, .fitness h2, .climbing h2 {
         font-size: 32px;
         padding: 25px 0;
     } 
 
+    /* more button styles */
     .more-btn {
         width: 230px;
         font-size: 25px;
@@ -726,10 +761,10 @@ footer .top-arrow img {
 
 
     .bio {
-        background-color: #3c3b3a;
-        
+        background-color: #3c3b3a;  
     }
 
+    /* this is the bio for simon block, I put it in a grid at this view so I could put everything in a line */
     .simon {
         padding: 50px 80px;
         display: grid;
@@ -784,6 +819,7 @@ footer .top-arrow img {
         line-height: 35pt;
     }
 
+    /* I arranged all the about services sections into a grid */
     .lounge, .bowling, .fitness, .climbing {
         padding: 50px 80px;
         display: grid;
@@ -791,51 +827,60 @@ footer .top-arrow img {
         grid-template-rows: repeat(9, 42px);
     }
 
+    /* these are the images that are left aligned */
     .lounge-img, .fitness-img {
         display: block;
         width: 100%;
         height: 375px;
         grid-column: 1 / span 3;
-        grid-row: 1 / span 1;
+        grid-row: 1 / span 9;
     }
 
+    /* the h1 to the right of the above images */
     .lounge-h1, .fitness-h1 {
-        grid-column: 4 / span 4;
+        grid-column: 4 / span 5;
         grid-row: 1 / span 6;
     }
 
+    /* the h2 padding for all images */
     .lounge h2, .bowling h2, .fitness h2, .climbing h2{
         padding: 10px 0;
     }
 
+    /* the h2 to the right of the above images */
     .lounge-h2, .fitness-h2 {
-        grid-column: 4 / span 4;
+        grid-column: 4 / span 5;
         grid-row: 2 / span 1;
     }
 
+    /* the p tag padding and font size */
     .lounge p, .bowling p, .fitness p, .climbing p {
         padding-top: 10px;
         font-size: 18px;
     }
 
+    /* the h1 to the right of the above images */
     .lounge-p, .fitness-p {
         grid-column: 4 / span 6;
         grid-row: 3 / span 3;
     }
 
+    /* I can't really remember why I did this but things broke when i took it out. */
     .lounge-img img, .bowling-img img, .fitness img, .climbing img{
-        height: 375px;
+        height: 23rem;
     }
 
+    /* these are the images that are right aligned */
     .bowling-img, .climbing-img {
+        overflow: hidden;
         display: block;
         width: 100%;
-        height: 375px;
         grid-column: 6 / span 3;
-        grid-row: 1 / span 1;
+        grid-row: 1 / span 9;
         padding-left: 28px;
     }
 
+    /* the h1, h2 and p tags to the left of the above image */
     .bowling-h1, .climbing-h1 {
         grid-column: 1 / span 5;
         grid-row: 1 / span 1;
@@ -848,9 +893,10 @@ footer .top-arrow img {
 
     .bowling-p, .climbing-p {
         grid-column: 1 / span 5;
-        grid-row: 3 / span 10;
+        grid-row: 3 / span 9;
     }
 
+    /* the thank you text for tablet */
     .thank-you h1{
         padding: 35px 140px;
         font-size: 55px;
@@ -858,7 +904,8 @@ footer .top-arrow img {
         text-align: center;
         line-height: 60pt;
     }
-    
+
+    /* this adresses all the logo images and makes them the right size for tablet */
     .logo img {
         padding: 35px 140px;
         width: 60%;
@@ -866,6 +913,7 @@ footer .top-arrow img {
         margin: auto;
     }
     
+    /* below are the individual logo imgs */
     .logo-sa img {
         width: 90%;
     }
@@ -925,12 +973,12 @@ footer .top-arrow img {
         margin: 86px 80px 50px;
     }
 
-    .location-info h1 {
+    .location-info h2 {
         font-size: 72px;
         padding-bottom: 48px; 
     }
 
-    .location-info h2 {
+    .location-info h3 {
         font-size: 40px;
         line-height: 47pt;
         padding-bottom: 48px;
@@ -993,12 +1041,6 @@ footer .top-arrow img {
         grid-row: 5 / span 1;
 
     }
-/* 
-    .active .active-icons figcaption{
-        display: flex;
-        justify-content: flex-start;
-        font-size: 13px;
-    } */
 
     .start-btn {
         grid-column: 1 / span 4;
@@ -1205,11 +1247,6 @@ footer .top-arrow img {
         padding-bottom: 5px;
     }
 
-
-
-
-
-
     .lounge, .bowling, .fitness, .climbing {
         padding: 80px 120px;
         display: grid;
@@ -1218,27 +1255,36 @@ footer .top-arrow img {
     }
 
     .lounge-img, .fitness-img {
-        height: unset;
+        overflow: hidden;
         grid-column: 1 / span 1;
         grid-row: 1 / span 6;
     }
 
+    .lounge-h1, .fitness-h1, .lounge-p, .fitness-p {
+        padding-left: 25px;
+    }
+
+    .lounge h2, .fitness h2{
+        padding-left: 25px;
+    }
+
     .lounge-h1, .fitness-h1 {
         grid-column: 2 / span 1;
-        grid-row: 2 / span 1;
+        grid-row: 1 / span 1;
     }
 
     .lounge-h2, .fitness-h2 {
         grid-column: 2 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 2 / span 1;
     }
 
     .lounge-p, .fitness-p {
         grid-column: 2 / span 1;
-        grid-row: 4 / span 4;
+        grid-row: 3 / span 4;
     }
 
     .bowling-img, .climbing-img {
+        overflow: hidden;
         grid-column: 2 / span 1;
         grid-row: 1 / span 6;
         padding-left: 28px;
@@ -1246,17 +1292,17 @@ footer .top-arrow img {
 
     .bowling-h1, .climbing-h1 {
         grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
+        grid-row: 1 / span 1;
     }
 
     .bowling-h2, .climbing-h2 {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 2 / span 1;
     }
 
     .bowling-p, .climbing-p {
         grid-column: 1 / span 1;
-        grid-row: 4 / span 4;
+        grid-row: 3 / span 4;
     }
 
     .subscribe {
@@ -1283,9 +1329,10 @@ footer .top-arrow img {
     }
 
     .thank-you {
+        padding: 80px 120px 0 120px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4 , 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
 
@@ -1297,33 +1344,25 @@ footer .top-arrow img {
     }
 
     .logo img{
-        padding: none;
+        padding: 0px;
     }
 
     .logo-sa {
-        padding: none;
-        width: 100%;
         grid-column: 1 / span 1;
         grid-row: 2;
     }
 
     .logo-ac img{
-        padding: none;
-        width: 100%;
         grid-column: 2 / span 1;
         grid-row: 2;
     }
 
     .logo-pcl img{
-        padding: none;
-        width: 100%;
         grid-column: 3 / span 1;
         grid-row: 2;
     }
 
     .logo-cibc img{
-        padding: none;
-        width: 100%;
         grid-column: 4 / span 1;
         grid-row: 2;
     }
@@ -1337,13 +1376,13 @@ footer .top-arrow img {
 
     .location-info {
         margin: unset;
-        grid-columns: 1 / span;
-        grid-rows: 1;
+        grid-column: 1 / span 1;
+        grid-row: 1;
     }
 
     .map {
-        grid-columns: 2 / span 1;
-        grid-rows: 1;
+        grid-column: 2 / span 1;
+        grid-row: 1;
     }
 
 
