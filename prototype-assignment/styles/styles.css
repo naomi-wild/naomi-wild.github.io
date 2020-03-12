@@ -116,7 +116,7 @@ main, .copy {
 
 /* This is the text styling on all p tags on a white background */
 .head-info p, .copy p, .copy-pub p, .about-top p, .who p, .lounge p, .bowling p, .fitness p, .climbing p, .contact-top p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30pt;
     padding-bottom: 30px;
 }
@@ -405,7 +405,7 @@ footer .top-arrow img {
 
 /* this is the padding and background for all the about content with white background. */
 .who, .bowling, .climbing {
-    padding: 35px 39px;
+    padding: 25px 35px;
     background-color: #F2F2F2;
 }
 
@@ -423,7 +423,7 @@ footer .top-arrow img {
 }
 
 .lounge, .fitness {
-    padding: 35px 39px;
+    padding: 35px 35px;
 }
 
 /* the styling for the h1's of all about sections. */
@@ -431,7 +431,7 @@ footer .top-arrow img {
     font-size: 32px;
     font-weight: 600;
     padding-bottom: 12px; 
-    line-height: 30pt;
+    line-height: 30px;
     color: #3C3B3A;
 }
 
@@ -748,8 +748,9 @@ footer .top-arrow img {
     
     /* styling for all the h2's in the about page */
     .copy h2, .copy-pub h2, .lounge h2, .bowling h2, .fitness h2, .climbing h2 {
-        font-size: 32px;
-        padding: 25px 0;
+        font-size: 24px;
+        padding-bottom: 10px;
+        color: #26A682;
     } 
 
     /* more button styles */
@@ -820,80 +821,52 @@ footer .top-arrow img {
     }
 
     /* I arranged all the about services sections into a grid */
-    .lounge, .bowling, .fitness, .climbing {
-        padding: 50px 80px;
+    .lounge, .bowling, .fitness, .climbing{
+        padding: 60px 80px;
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(9, 42px);
-    }
+        grid-template-columns: 2fr 1fr;
+    } 
 
-    /* these are the images that are left aligned */
-    .lounge-img, .fitness-img {
+    .lounge-img, .bowling-img, .fitness-img, .climbing-img {
         display: block;
+    }
+
+    .lounge-img img, .bowling-img img, .fitness-img img, .climbing-img img {
         width: 100%;
-        height: 375px;
-        grid-column: 1 / span 3;
-        grid-row: 1 / span 9;
     }
 
-    /* the h1 to the right of the above images */
-    .lounge-h1, .fitness-h1 {
-        grid-column: 4 / span 5;
-        grid-row: 1 / span 6;
+    /* bowling and climbing */
+    .bowling .bowling-h1, .bowling .bowling-h2, .bowling .bowling-p, .climbing .climbing-h1, .climbing .climbing-h2, .climbing .climbing-p  {
+        margin-right: 2rem;
+        grid-column: 1 / 2;
     }
 
-    /* the h2 padding for all images */
-    .lounge h2, .bowling h2, .fitness h2, .climbing h2{
-        padding: 10px 0;
+    /* loung and fitness */
+    .lounge .lounge-h1, .lounge .lounge-h2, .lounge .lounge-p, .fitness .fitness-h1, .fitness .fitness-h2, .fitness .fitness-p  {
+        margin-left: 2rem;
+        grid-column: 2 / 3;
     }
 
-    /* the h2 to the right of the above images */
-    .lounge-h2, .fitness-h2 {
-        grid-column: 4 / span 5;
-        grid-row: 2 / span 1;
+    /* bowling and climbing */
+    .bowling .bowling-p, .climbing .climbing-p {
+        margin-right: 2rem;
     }
 
-    /* the p tag padding and font size */
-    .lounge p, .bowling p, .fitness p, .climbing p {
-        padding-top: 10px;
-        font-size: 18px;
+    /* loung and fitness */
+    .lounge .lounge-p, .fitness .fitness-p {
+        margin-left: 2rem;
     }
 
-    /* the h1 to the right of the above images */
-    .lounge-p, .fitness-p {
-        grid-column: 4 / span 6;
-        grid-row: 3 / span 3;
+    /* bowling and climbing */
+    .bowling .bowling-img, .climbing .climbing-img {
+        grid-column: 2 / 3;
+        grid-row: 1 / 5;
     }
 
-    /* I can't really remember why I did this but things broke when i took it out. */
-    .lounge-img img, .bowling-img img, .fitness img, .climbing img{
-        height: 23rem;
-    }
-
-    /* these are the images that are right aligned */
-    .bowling-img, .climbing-img {
-        overflow: hidden;
-        display: block;
-        width: 100%;
-        grid-column: 6 / span 3;
-        grid-row: 1 / span 9;
-        padding-left: 28px;
-    }
-
-    /* the h1, h2 and p tags to the left of the above image */
-    .bowling-h1, .climbing-h1 {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 1;
-    }
-
-    .bowling-h2, .climbing-h2 {
-        grid-column: 1 / span 4;
-        grid-row: 2 / span 1;
-    }
-
-    .bowling-p, .climbing-p {
-        grid-column: 1 / span 5;
-        grid-row: 3 / span 9;
+    /* loung and fitness */
+    .lounge  .lounge-img, .fitness .fitness-img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 5;
     }
 
     /* the thank you text for tablet */
@@ -939,12 +912,14 @@ footer .top-arrow img {
         font-size: 70px;
     }
 
+    /* the button basic styles on the container */
     .submit {
         width: 210px;
         height: 65px;
         font-size: 40px;
     }
 
+    /* this is to push the button to the right side of the page */
     .submit-btn {
         display: flex;
         justify-content: flex-end;
@@ -954,6 +929,7 @@ footer .top-arrow img {
         font-size: 24px;
     }
 
+    /* this is the style on the first name, last name and email fields  */
     #contact input[type="text"] {
         height: 50px;
 	    margin: 25px 0 25px;
@@ -961,6 +937,7 @@ footer .top-arrow img {
         font-size: 16px;
     }
 
+    /* this is the text area for people to leave a message with simple styling */
     #contact textarea[name="message"] {
         height: 148px;
 	    margin: 25px 0 30px;
@@ -969,6 +946,7 @@ footer .top-arrow img {
         color: #3C3B3A;
     }
 
+    /* this is all the contact info copy */
     .location-info {
         margin: 86px 80px 50px;
     }
@@ -988,7 +966,7 @@ footer .top-arrow img {
         font-size: 18px;
     }
     
-
+    /* this is the map iframe for tablet */
     .map iframe{
         height: 500px;
     }
@@ -1247,62 +1225,12 @@ footer .top-arrow img {
         padding-bottom: 5px;
     }
 
-    .lounge, .bowling, .fitness, .climbing {
-        padding: 80px 120px;
+    /* services styles for desktop */
+    .lounge, .bowling, .climbing, .fitness {
+        padding: 80px 140px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 3rem);
-    }
+        grid-template-columns: 1fr 1fr;
 
-    .lounge-img, .fitness-img {
-        overflow: hidden;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 6;
-    }
-
-    .lounge-h1, .fitness-h1, .lounge-p, .fitness-p {
-        padding-left: 25px;
-    }
-
-    .lounge h2, .fitness h2{
-        padding-left: 25px;
-    }
-
-    .lounge-h1, .fitness-h1 {
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
-    }
-
-    .lounge-h2, .fitness-h2 {
-        grid-column: 2 / span 1;
-        grid-row: 2 / span 1;
-    }
-
-    .lounge-p, .fitness-p {
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 4;
-    }
-
-    .bowling-img, .climbing-img {
-        overflow: hidden;
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 6;
-        padding-left: 28px;
-    }
-
-    .bowling-h1, .climbing-h1 {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-    }
-
-    .bowling-h2, .climbing-h2 {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-    }
-
-    .bowling-p, .climbing-p {
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 4;
     }
 
     .subscribe {
@@ -1386,13 +1314,4 @@ footer .top-arrow img {
     }
 
 
-
-
-
-    
-
-
-
 }
-
-
