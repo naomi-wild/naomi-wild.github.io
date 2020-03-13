@@ -609,7 +609,6 @@ footer .top-arrow img {
     }
 }
 
-
 /* tablet view */
 @media (min-width: 700px) {
     /* this is the nav container on tablet. I created a grid to put the logo and all the menu items inline  */
@@ -717,13 +716,16 @@ footer .top-arrow img {
         padding: 12px;
     }
 
-    /* this is the scroll button with basic styling to center it */
+    /* this is the scroll button with basic styling to center it.  I added an animation to this so it would pulse */
     .scroll-btn {
         padding-top: 35px;
         display: grid;
         justify-content: center;
         text-align: center;
         line-height: 30px;
+
+        transform: scale(1);
+        animation: pulse 2s infinite;
     }
 
     /* I used transform to make the arrow point down */
@@ -821,10 +823,16 @@ footer .top-arrow img {
     }
 
     /* I arranged all the about services sections into a grid */
-    .lounge, .bowling, .fitness, .climbing{
+    .bowling, .climbing{
         padding: 60px 80px;
         display: grid;
         grid-template-columns: 2fr 1fr;
+    } 
+
+    .lounge, .fitness{
+        padding: 60px 80px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
     } 
 
     .lounge-img, .bowling-img, .fitness-img, .climbing-img {
@@ -971,10 +979,25 @@ footer .top-arrow img {
         height: 500px;
     }
 
+    /* this is the keyframe for the scroll button */
+    @keyframes pulse {
+        30% {
+            transform: scale(0.95);
+        }
+    
+        70% {
+            transform: scale(1);
+        }
+    
+        100% {
+            transform: scale(0.95);
+        }
+    }
 }
 
 /* desktop view */
 @media (min-width: 1200px) {
+    /* desktop styles for the nav bar */
     .nav-logo {
         padding: 2px 140px
     }
@@ -990,7 +1013,7 @@ footer .top-arrow img {
         padding-left: 40px;
     }
 
-
+    /* Heading section - I used grid to rearange the copy/icons and image to be side by side */
     .head-content {
         margin: 80px 120px;
         display: grid;
@@ -1003,28 +1026,33 @@ footer .top-arrow img {
         grid-row: 2 / span 4;
     }
 
+    /* the copy h teg styles */
     .head-info h1 {
         font-size: 60px;
         line-height: 50pt;
         padding-bottom: 20px;
     }
 
+    /* the p teg copy styles */
     .head-info p {
         font-size: 20px;
         line-height: 25pt;
     }
 
+    /* the icons */
     .active {
         grid-column: 1 / span 5;
         grid-row: 5 / span 1;
 
     }
 
+    /* the start button */
     .start-btn {
         grid-column: 1 / span 4;
         grid-row: 6 / span 1;
     }
 
+    /* scroll btn centered below */
     .scroll-btn {
         grid-column: 7 / span 1;
         grid-row: 7 / span 1;
@@ -1035,6 +1063,7 @@ footer .top-arrow img {
         grid-row: 1 / span 8;  
     }
 
+    /*this is the first discovery section which i put in a grid to have the image and copy side by side*/
     .discover-1 {
         padding: 80px 120px;
         background-color: #f2f2f2;
@@ -1052,6 +1081,7 @@ footer .top-arrow img {
         margin: 0 0 0 40px;
     }
 
+    /* some basic styles to the heading and paragraph to work with desktop view  */
     .copy h2 {
         padding: 8px 0;
     }
@@ -1060,11 +1090,13 @@ footer .top-arrow img {
         font-size: 18px;
     }
 
+    /* this is the container for the button, I gave it a display: flex so it would go to the right side of the page */
     .copy .more-container {
         display: flex;
         justify-content: flex-end;
     }
 
+    /* this is the bio section, I put it in a grid so I could have the image, name/title and copy in a line */
     .simon {
         padding: 40px 120px;
         display: grid;
@@ -1105,7 +1137,7 @@ footer .top-arrow img {
         grid-row: 1 / span 4;
     }
 
-
+    /* this is the second discovery section which i also put in a grid to have the image and copy side by side */
     .discover-2 {
         padding: 80px 120px;
         background-color: #f2f2f2;
@@ -1117,7 +1149,6 @@ footer .top-arrow img {
     .entertainment-img {
         width: 100%;
         grid-column: 2 / span 1;
-
     }
 
    .copy-pub {
@@ -1134,15 +1165,18 @@ footer .top-arrow img {
         font-size: 18px;
     }
 
+    /* this is the button for the second discovery section which, is also flexed so it goes to the right side of page */
     .copy-pub .btn-more {
         display: flex;
         justify-content: flex-start;
     }
 
+    /* this is the content at the top of the about page */
     .about-top {
         margin: 80px 120px;
     }
 
+    /* I put the top content into a grid so I could have content side by side like with the home page */
     .construction-copy {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1169,6 +1203,7 @@ footer .top-arrow img {
         font-size: 72px;
     }
 
+    /* this is the who, what, where section, I put these in a grid so I could make the three sections in a line */
     .who {
         padding: 140px 120px;
         display: grid;
@@ -1194,45 +1229,14 @@ footer .top-arrow img {
         padding-left: 18px;
     }
 
-    .contact-top {
-        padding: 80px 120px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-    }
-
-    .contact-copy {
-        grid-column: 1 / span 3;
-        grid-row: 1;
-    }
-
-    .contact {
-        width: 100%;
-        margin: unset;
-        grid-column: 4 / span 2;
-        grid-row: 1;
-    }
-
-    footer .top-arrow a {
-        font-size: 16px;
-        right: 25px;
-        top: 35px;
-    }
-    
-    footer .top-arrow img {
-        width: 55px;
-        align-self: center;
-        padding-bottom: 5px;
-    }
-
     /* services styles for desktop */
     .lounge, .bowling, .climbing, .fitness {
         padding: 80px 140px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-
     }
 
+    /* this is the sibscribe section on the about page I made it into a grid so I could arrange content side by side */
     .subscribe {
         padding: 25px 200px;
         display: grid;
@@ -1247,6 +1251,7 @@ footer .top-arrow img {
         grid-row: 1;
     }
 
+    /* took out padding */
     .subscribe p {    
         padding-bottom: unset;
     }
@@ -1256,6 +1261,7 @@ footer .top-arrow img {
         grid-row: 1;
     }
 
+    /* the thank you section at bottom, in a grid */
     .thank-you {
         padding: 80px 120px 0 120px;
         display: grid;
@@ -1263,7 +1269,7 @@ footer .top-arrow img {
         grid-template-rows: repeat(2, 1fr);
     }
 
-
+    /* the copy on the first row */
     .thank-you h1 {
         font-size: 72px;
         line-height: 85pt;
@@ -1275,6 +1281,7 @@ footer .top-arrow img {
         padding: 0px;
     }
 
+    /* all the logos on the second row in line */
     .logo-sa {
         grid-column: 1 / span 1;
         grid-row: 2;
@@ -1295,6 +1302,27 @@ footer .top-arrow img {
         grid-row: 2;
     }
 
+    /* this is the contact page, I arranged the top part in a grid so it would be side by side (exactly like home and about) */
+    .contact-top {
+        padding: 80px 120px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    
+    .contact-copy {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    /* the contact form styles */
+    .contact {
+        width: 100%;
+        margin: unset;
+        grid-column: 4 / span 2;
+        grid-row: 1;
+    }
+
+    /* this is the container for the map and contact info which I yet again used freaking grid for */
     .map-n-stuff {
         margin: 80px 120px;
         display: grid;
@@ -1313,5 +1341,16 @@ footer .top-arrow img {
         grid-row: 1;
     }
 
-
+    /* footer styles across all pages */
+    footer .top-arrow a {
+        font-size: 16px;
+        right: 25px;
+        top: 35px;
+    }
+    
+    footer .top-arrow img {
+        width: 55px;
+        align-self: center;
+        padding-bottom: 5px;
+    }
 }
