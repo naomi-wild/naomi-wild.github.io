@@ -11,7 +11,29 @@
     <title>Bootstrap This</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <!-- A branding style can be achived by adding .navbar-brand -->
+        <a href="#" class="navbar-brand">
+          <img src="images/logo.png" class="mw-20" alt="my logo">
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
+          <!-- adding an icon for the toggler button -->
+          <span class="navbar-toggler-icon">
+
+          </span>
+        </button>
+        <!-- main nav needs to be placed inside a .navbar-nav container in order to work \/(^>^)\/ -->
+        <div id="mynav" class="collapse navbar-collapse">
+          <div class="navbar-nav ml-auto align-items-center">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
