@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final-assignment</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="nav-logo" id="nav-logo">
+        <div>
+            <img class="logo-image" src="images/logo-full.svg" alt="ARC Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a class="active" href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact">
+        <picture class="contact-img">
+            <source srcset="images/contact-218_x_375.jpg 218w"
+            media="(max-width: 700px)">
+
+            <source srcset="images/contact-218_x_375.jpg 218w"
+            media="(max-width: 1200px)">
+
+            <source srcset="images/contact-813_x_337.jpg 813w"
+            media="(min-width: 1200px)">
+
+            <img src="images/contact.jpg" alt="architecture image">
+        </picture>
+        <div id="contact" class="contact">
+            <form id="contact-form" class="contact-form">
+                <h2 class="section-title">Contact Us.</h2>
+                <div class="contact-form-section">
+                    <label class="first-last" for="name">Full Name</label>
+                    <input class="contact-form-input" id="name" type="text" placeholder="Full Name">
+                </div>
+                <div class="contact-form-section">
+                    <label class="email" for="email">Email</label>
+                    <input class="contact-form-input" id="email" type="text" placeholder="Email">
+                </div>
+                <div>
+                    <label for="comment">Message</label>
+                    <textarea name="message" id="comment" placeholder="Message"></textarea>
+                </div>
+                <div class="submit-btn">
+                    <button class="submit" type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="top-arrow">
+        <a href="#nav-logo">
+            <img src="images/arrow-icon.svg" alt="arrow">
+        </a> 
+    </div>
+    <footer>
+        <p class="follow">&copy;NaomiWildeboer</p>
+        <div class="social">
+            <img src="images/insta-icon.svg" alt="instagram">
+            <img src="images/github-icon.svg" alt="github">
+            <img src="images/facebook-icon.svg" alt="facebook">
+        </div>
+    </footer>
+</body>
+</html>
