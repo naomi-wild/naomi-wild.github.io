@@ -52,6 +52,10 @@ table {
 
 /* my code starts here */
 
+*,*:after,*:before {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto';
 }
@@ -109,24 +113,26 @@ nav ul li a:active {
     top: 50%;
     left: 50%;
     transform: translate(-75%, -50%);
-}
+} 
 
-.banner h1, .home .copy h2{
+.banner h1, .home .copy h2, .naomi h1{
     font-size: 35px;
     padding-bottom: 25px;
     line-height: 45px;
     font-weight: lighter;
+    color: #3F4442;
 }
 
-.banner p, .home .copy p {
+.banner p, .home .copy p, .naomi p {
     font-weight: lighter;
     line-height: 20px;
     padding-bottom: 25px;
+    color: #3F4442;
 }
 
 .start-btn, .web-btn, .design-btn, .photo-btn {
     width: 140px;
-    height: 20px;
+    height: 38px;
     padding: 10px;
     border-radius: 4px;
     background-color: #859875;
@@ -166,12 +172,61 @@ nav ul li a:active {
     justify-content: end;
 }
 
+/* About Page */
+.naomi {
+    margin: 35px;
+}
+
+.naomi img{
+    width: 200px;
+    border-radius: 50% ;
+    border: 5px solid #F2F2F2;
+    display: block;
+    margin: auto;
+}
+
+.naomi h2{
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #3F4442;
+    line-height: 15px;
+    padding-top: 25px;    
+}
+
+.naomi h1 {
+    padding-top: 25px;
+}
+
+.naomi p {
+    line-height: 30px;
+}
+
+
+/* All pages */
 footer {
     background-color: #C3D2DA;
-    padding: 35px;
+    padding: 25px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+footer .social {
+    padding-top: 10px;
+}
+
+footer .social a{
+    text-decoration: none;
+}
+
+footer .social img {
+    padding: 0 5px;
+    
+}
+
+
 
 
 
