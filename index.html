@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>My Website</title>
-    </head>
-    <body>
-        <h1>Naomi Wildeboer</h1>
-        <p>Course: MTM6201-030</p>
-        <p>Username: Naomi-wild</p>
-        <p>I was sick all break so I was just in bed \/(^~^)\/</p>    
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final-assignment</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="nav-logo" id="nav-logo">
+        <div>
+            <img class="logo-image" src="images/logo-full.svg" alt="ARC Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <picture class="banner-img">
+            <source srcset="images/banner-375_x_375.jpg 375w"
+            media="(max-width: 700px)">
+
+            <source srcset="images/banner-765_x_648.jpg 765w"
+            media="(max-width: 1200px)">
+
+            <source srcset="images/banner-1920_x_728.jpg 1920w"
+            media="(min-width: 1200px)">
+
+            <img src="images/banner.jpg" alt="forest">
+        </picture>
+        <div class="banner-copy">
+            <h1>Interactive 
+            Media Design</h1> 
+            <p>Are you starting a new website? Looking to revitalize an old one? In need of branding solutions, or professional media content? From businesses to entrepreneurs - <strong>share your message with me, and I’ll put it out there!</strong> </p>
+            <div class="btn start-btn">
+                <a href="about.html">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+    <main class="home">
+        <div class="web">
+            <img src="images/web-img.svg" alt="laptop with code">
+            <div class="copy web-copy">
+                <h2>Web Development</h2>
+                <p>Design an entirely unique website from scratch, or revamp an old one, based on your needs.</p>
+            </div>
+            <div class="btn-box">
+                <div class="btn web-btn">
+                    <a href="portfolio.html">View Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="design">
+            <img src="images/design-img.svg" alt="paint palett">
+            <div class="copy design-copy">
+                <h2>Graphic Design</h2>
+                <p>User-centred design across a variety of mediums. Websites, apps, social media, brochures, posters, and more!</p>
+            </div>
+            <div class="btn-box">
+                <div class="btn design-btn">
+                    <a href="portfolio.html">View Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="photog">
+            <img src="images/photo-img.svg" alt="camera">
+            <div class="copy photog-copy">
+                <h2>Photography & Video</h2>
+                <p>High quality film and photo production. Photoshoots, headshots, and promotional videos, according to your needs.</p>
+            </div>
+            <div class="btn-box">
+                <div class="btn photo-btn">
+                    <a href="portfolio.html">View Work</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="top-arrow">
+        <a href="#nav-logo">
+            <img src="images/arrow-icon.svg" alt="arrow">
+        </a> 
+    </div>
+    <footer>
+        <p class="follow">&copy;NaomiWildeboer</p>
+        <div class="social">
+            <a href="https://www.instagram.com/naomi_g_w/?hl=en" target="blank">
+                <img src="images/insta-icon.svg" alt="instagram">
+            </a>
+            <a href="https://github.com/naomi-wild" target="blank">
+                <img src="images/github-icon.svg" alt="github">
+            </a>
+            <a href="https://www.facebook.com/Naomi.Wildeboer" target="blank">
+                <img src="images/facebook-icon.svg" alt="facebook">
+            </a>
+        </div>
+    </footer>
+</body>
 </html>
