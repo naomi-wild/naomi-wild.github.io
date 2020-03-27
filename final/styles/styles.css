@@ -115,7 +115,7 @@ nav ul li a:active {
     transform: translate(-75%, -50%);
 } 
 
-.banner h1, .home .copy h2, .naomi h1{
+.banner h1, .home .copy h2, .naomi h1, .info-web h2, .info-design h2, .info-photo h2{
     font-size: 35px;
     padding-bottom: 25px;
     line-height: 45px;
@@ -123,7 +123,7 @@ nav ul li a:active {
     color: #3F4442;
 }
 
-.banner p, .home .copy p, .naomi p {
+.banner p, .home .copy p, .naomi p, .info-web p, .info-design p, .info-photo p {
     font-weight: lighter;
     line-height: 20px;
     padding-bottom: 25px;
@@ -200,6 +200,23 @@ nav ul li a:active {
 
 .naomi p {
     line-height: 30px;
+}
+
+.info-web, .info-photo {
+    margin: 55px 35px;
+}
+
+.web-img {
+    height: 12rem;
+    overflow: hidden;
+}
+.web-img img {
+    width: 100%;
+}
+
+.info-design {
+    background-color: #F9F9F9;
+    padding: 55px 35px;
 }
 
 
