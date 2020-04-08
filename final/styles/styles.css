@@ -64,11 +64,15 @@ header {
     background-color: #F1F3F5;
 }
 
-.logo-image {
+.sm-logo .logo-image {
     width: 70%;
     display: block;
     padding-top: 30px;
     margin: auto;
+}
+
+.lg-logo .logo-image {
+    display: none;
 }
 
 .active {
@@ -128,6 +132,10 @@ nav ul li a:active {
     line-height: 20px;
     padding-bottom: 25px;
     color: #3F4442;
+}
+
+.banner p strong {
+    font-weight: bolder;
 }
 
 .start-btn, .web-btn, .design-btn, .photo-btn {
@@ -202,23 +210,119 @@ nav ul li a:active {
     line-height: 30px;
 }
 
-.info-web, .info-photo {
-    margin: 55px 35px;
+/* portfolio page */
+.portfolio {
+    padding-top: 35px;
 }
 
-.web-img {
-    height: 12rem;
-    overflow: hidden;
+.info-web, .info-photo {
+    margin: 55px 35px;
+    /* text-align: end; */
 }
-.web-img img {
+
+.web-img, .contact-img {
+    height: auto;
+
+}
+.web-img img, .contact-img img {
     width: 100%;
 }
 
 .info-design {
     background-color: #F9F9F9;
     padding: 55px 35px;
+    text-align: end;
 }
 
+.web-btn {
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+/* contact page */
+
+
+
+
+
+.contact {
+    margin: 55px 35px;
+}
+
+.contact-box {
+    margin-top: 55px;
+}
+
+/* this targets the green box around the form fields. */
+.contact-box .contact-form {
+    margin: 0 auto;
+    padding: 9%;
+    width: 100%;
+    background-color: #859875;
+    box-shadow: 0 5px 10px rgba(18, 74, 58, 50%); 
+    color: #F2F2F2;
+}
+
+/* this addresses the form title */
+.contact-box .contact-form .section-title {
+    font-size: 40px;
+    color: #F2F2F2;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+
+/* this is the form button */
+.submit {
+    width: 100%;
+    height: 50px;
+    background-color:#ffffff;
+    border-radius: 5px;
+    border: solid 1px #3F4442;
+    font-size: 32px;
+    font-weight: lighter;
+    display: block;
+    text-align: center;
+    color: #3F4442;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(18, 74, 58, 50%);
+    font-family: 'Roboto';
+}
+
+/* these are the styles for the lables and text fields in the form */
+#contact input[type="text"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: unset;
+	background-color:#F4F4F5;
+	margin: 9px 0 18px;
+    padding: 15px 22px;
+    font-size: 16px;
+    color: #3C3B3A;
+    font-weight: lighter;
+    font-family: 'Roboto';
+}
+
+/* this is the messag area. I had to take out some of the pre existing styles and add new ones */
+#contact textarea[name="message"] {
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    border: unset;
+	background-color:#F4F4F5;
+	margin: 9px 0 18px;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #3C3B3A;
+    resize: none;
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
+
+#contact textarea[type="text"] {
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
 
 /* All pages */
 footer {
@@ -243,6 +347,325 @@ footer .social img {
     
 }
 
+
+/* TABLET VIEW */
+@media (min-width: 700px) {
+    body {
+        position: relative;
+    }
+
+    .nav-home {
+        background: none;
+        position: absolute;
+        top: 1px;
+        z-index: 100;
+    }
+
+    .nav-logo {
+        padding: 25px 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .lg-logo .logo-image {
+        width: 115px;
+        grid-column: 1 / span 1;
+        display: block;
+    }
+    
+    .sm-logo {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        grid-column: 2 / span 1;
+    }
+
+    nav ul li a {
+        text-align: end;
+        font-size: 18px;
+        padding-left: 35px;
+        padding-top: 35px;
+    }
+
+    .banner-copy h1 {
+        font-size: 45px;
+        width: 100%;
+    }
+
+    .banner-copy p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .banner-copy {
+        left: 48%;
+    }
+
+    .home {
+        margin: 80px 75px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .web {
+        grid-column: 1 / span 1;
+        margin-right: 10px;
+    }
+
+    .web-btn-home {
+        display: none;
+    }
+
+    .design {
+        grid-column: 2 / span 1;
+        margin: 0 10px 0 10px;
+    }
+
+    .design-btn-home {
+        display: block;
+        margin: auto;
+    }
+
+    .photog {
+        grid-column: 3 / span 1;
+        margin-left: 10px;
+    }
+
+    .photo-btn-home {
+        display: none;
+    }
+
+    .copy {
+        text-align: center;
+    }
+
+    .home .copy h2 {
+        font-size: 25px;
+        padding-bottom: 25px;
+        line-height: 30px;
+    }
+
+    .web img, .design img, .photog img {
+        width: 70%;
+    }
+
+    .design img {
+        padding-top: 2rem;
+    }
+
+    .photog img {
+        padding-top: 55px;
+        padding-bottom: 35px; 
+    }
+
+    .design-btn {
+        width: 180px;
+    }
+
+    .btn-box {
+        padding-top: 25px;
+    }
+
+    /* about page */
+    .bio {
+        margin: 80px 75px;
+    }
+
+    .bio-4 {
+        font-size: 20px;
+    }
+
+    /* Portfolio Page */
+    .portfolio {
+        padding-top: 35px;
+    }
+    
+    .info-web, .info-photo {
+        margin: 75px 80px;
+    }
+    
+    .info-design {
+        padding: 75px 80px;
+    }
+
+    /* contact page */
+    .contact {
+        margin: 75px 80px;
+    }
+    
+    .submit {
+        width: 170px;
+    }
+
+    /* footer all pages */
+    .top-arrow img {
+        width: 25px;
+        padding-bottom: 10px;
+    }
+    
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .follow {
+        padding-left: 65px;
+        grid-column: 1 / span 1;
+    }
+    
+    .social {
+        grid-column: 2 / span 1;
+        margin: auto;
+    }
+}
+
+
+/* DESKTOP VIEW */
+@media (min-width: 950px) {
+    
+    
+    .lg-logo .logo-image {
+        display: none;
+    }
+    
+    .sm-logo {
+        width: 512px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .nav-logo {
+       padding: 8px 80px;
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: repeat(1, 1fr);
+    }
+
+    .navbar {
+        padding-top: 23px;
+        grid-column: 4 / span 1;
+    }
+
+    .banner-copy h1 {
+        font-size: 60px;
+    }
+
+    .home {
+        margin: 100px 200px;
+    }
+
+    .web img, .design img, .photog img {
+        width: 50%;
+    }
+
+    .home .copy h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .home .copy p {
+        font-size: 18px;
+        padding-bottom: 25px;
+        line-height: 30px;
+    }
+
+    .design img {
+        padding-top: 1.9rem;
+    }
+
+    .photog img {
+        padding-top: 60px;
+        padding-bottom: 35px; 
+    }
+
+    /* About page */
+
+    .bio-grid {
+        margin: 100px 200px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .bio-grid-1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    .bio-grid-2 {
+        margin-left: 35px;
+        grid-column: 3 / span 4;
+        grid-row: 1 / span 2;
+    }
+
+    .bio h1 {
+        font-size: 60px;
+    }
+
+    p.bio-4 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    /* portfolio page */
+    .portfolio {
+        padding-top: 75px;
+    }
+    
+    .info-web, .info-photo {
+        margin: 100px 200px;;
+    }
+    
+    .info-design {
+        padding: 100px 200px;
+    }
+
+    /* web */
+    .info-web, .info-photo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .web-img {
+        grid-column: 1 / span 1;
+        margin: 0 20px 0 0;
+    }
+
+    .web-grid, .photo-grid {
+        grid-column: 2 / span 1;
+        margin: 0 0 0 20px; 
+    }
+
+    h2.portfolio {
+        padding: 0px;
+    }
+
+    /* contact page */
+    .contact {
+        margin: 100px 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .contact-img {
+        grid-column: 1 / span 1;
+        margin-right: 20px;
+        height: 50%;
+        width: 50%;
+    }
+
+    .contact-box {
+        margin: 0 0 0 20px;
+        grid-column: 2 / span 1;
+    }
+
+}
 
 
 

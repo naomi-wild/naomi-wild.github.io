@@ -10,49 +10,65 @@
 
 <body>
     <header class="nav-logo" id="nav-logo">
-        <div>
+        <div class="sm-logo">
             <img class="logo-image" src="images/logo-full.svg" alt="ARC Logo">
         </div>
-        <nav>
-            <ul class="nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a class="active" href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div class="lg-logo">
+            <img class="logo-image" src="images/logo-icon.png" alt="ARC Logo">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a class="active" href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main" class="portfolio">
         <div class="info-web">
             <div class="web-img">
-                <img src="images/web.jpg" alt="website design">
+                <img src="images/web-sm.jpg" alt="website design">
             </div>
-            <h2>Web Development</h2>
-            <p>I create mobile-first responsive web products, designed to industry standards, with training in CSS,
-                HTML, and more. Let’s build a website together! Click below to visit one of my latest sites. </p>
-            <div class="btn web-btn">
-                <a href="#">View Site</a>
+            <div class="web-grid">
+                <h2 class="portfolio">Web Development</h2>
+                <p>I create mobile-first responsive web products, designed to industry standards, with training in CSS,
+                    HTML, and more. Let’s build a website together! Click below to visit one of my latest sites. </p>
+                <div class="btn web-btn">
+                    <a href="#">View Site</a>
+                </div>
             </div>
         </div>
         <div class="info-design">
-            <div class="web-img">
-                <img src="images/design.jpg" alt="website design">
+            <div class="web-img design-img">
+                <img src="images/design-sm.jpg" alt="website design">
             </div>
-            <h2>Graphic Design</h2>
-            <p>My background in the fine arts translates into my graphic design products. Trained in UX design - a
-                process that involves and prioritizes the user from start to finish - my work includes logo design,
-                digital graphics, website layouts, and more.</p>
-            <div class="btn web-btn">
-                <a href="#">Download Sample</a>
+            <div class="design-grid">
+                <h2 class="portfolio">Graphic Design</h2>
+                <p>My background in the fine arts translates into my graphic design products. Trained in UX design - a
+                    process that involves and prioritizes the user from start to finish - my work includes logo design,
+                    digital graphics, website layouts, and more.</p>
+                <div class="btn-box">
+                    <div class="btn web-btn design-btn">
+                        <a href="#">Download Sample</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="info-photo">
-            <picture class="web-img">
-            </picture>
-            <h2>Photography & Video</h2>
-            <p>I offer high quality service in photography and videography, such as portraits, interviews, and promotional videos. I am trained to use professional equipment and editing software to create a final product to your specifications.</p>
-            <div class="btn web-btn">
-                <a href="#">Download Sample</a>
+            <div class="web-img photo-img">
+                <img src="images/photo-sm.jpg" alt="website design">
+            </div>
+            <div class="web-grid">
+                <h2 class="portfolio">Photography & Video</h2>
+                <p>I offer high quality service in photography and videography, such as portraits, interviews, and
+                    promotional videos. I am trained to use professional equipment and editing software to create a
+                    final product to your specifications.</p>
+                <div class="btn web-btn">
+                    <a href="#">Download Sample</a>
+                </div>
             </div>
         </div>
     </main>
