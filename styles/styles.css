@@ -56,6 +56,10 @@ table {
     box-sizing: border-box;
 }
 
+.container-all {
+    max-width: 1900px;
+}
+
 body {
     font-family: 'Roboto';
 }
@@ -372,6 +376,10 @@ footer .social img {
         grid-column: 1 / span 1;
         display: block;
     }
+
+    .sm-logo .logo-image {
+        margin-left: 10%;
+    }
     
     .sm-logo {
         display: none;
@@ -549,8 +557,13 @@ footer .social img {
         grid-column: 4 / span 1;
     }
 
+    .banner-copy {
+        top: 55%;
+    } 
+
     .banner-copy h1 {
-        font-size: 60px;
+        font-size: 50px;
+        line-height: 60px;
     }
 
     .home {
