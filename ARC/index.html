@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- *same across all pages* this is the head, containing all the meta data and links(style sheet and font) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm-final</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<!-- the body section with a header, main, div's(w a class of discover-1 and discover-2)aside and footer -->
+<body>
+    <!-- *same across all pages* header contains the nav bar with the three html pages and the logo -->
+    <header class="nav-logo" id="nav-logo">
+        <div>
+            <img class="logo-image" src="images/logo.svg" alt="ARC Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- The main section contains the h1, p, active icons, start button, reading image and scroll button -->
+    <main class="head-content">
+        <div class="head-info" id="head-info">
+            <h1>Discover Your ARC.</h1>
+            <p>With Algonquin College's newest facility, there's always 
+                something for everyone to discover and enjoy!</p>
+        </div>
+        <!-- the icons are arranged in a div with images and captions  -->
+        <div class="active">
+            <div class="active-icons">
+                <img class="box-1" src="images/icons/bowling.png" alt="bowling">
+                <div class="box box-2">Bowling</div>
+                <img class="box-3" src="images/icons/climbing.png" alt="climbing">
+                <div class="box box-4">Rock Climbing</div>
+                <img class="box-5" src="images/icons/fitness.png" alt="fitness center">
+                <div class="box box-6">Fitness Center</div>
+                <img class="box-7" src="images/icons/basketball.png" alt="indoor court">
+                <div class="box box-8">Indoor Court</div>
+            </div>
+        </div>
+        <!-- this is the start button in div with class-->
+        <div class="btn start-btn">
+            <a href="about.html">Get Started</a>
+        </div>
+        <!-- the reading svg in div with class -->
+        <div class="reading-img"> 
+            <img src="images/discover.svg" alt="girl reading">
+        </div>
+        <!-- scroll button in div with class -->
+        <div class="scroll-btn">
+            <img src="images/icons/arrow.svg" alt="arrow">
+            Scroll
+        </div>
+    </main>
+    <!-- the div with class of discovery-1 containing the school image, the copy and button in the first section -->
+        <div class="discover-1">
+            <div class="school-img">
+                <picture>
+                    <source srcset="images/school-325_x_200.jpg 325w,
+                    images/school-360_x_200.jpg 360w,
+                    images/school-411_x_200.jpg 411w"
+                    media="(min-width: 200px)">
+  
+                    <source srcset="images/school-700_x_200.jpg 700w,
+                    images/school-750_x_200.jpg 750w,
+                    images/school-800_x_200.jpg 800w"
+                    media="(min-width: 700px)">
+                      
+                    <source srcset="images/school-813_x_337.jpg 813w,
+                    images/school-981_x_407.jpg 981w"
+                    media="(min-width: 1000px)">
+                
+
+                    <img class="img-school" src="images/school.jpg" alt="school">
+                </picture>
+            </div>
+            <div class="copy">
+                <h1>Discover.</h1>
+                <h2>Algonquin College</h2>
+                <p>of Applied Arts and Technology is a publicly funded 
+                English-language college located in Ottawa, Ontario, 
+                Canada. The college serves the National Capital Region 
+                and the outlying areas of Eastern Ontario, Western Quebec, 
+                and Upstate New York.</p>
+                <div class="btn-more">
+                    <div class="btn more-btn"> <a href="about.html">Learn More</a>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    <!-- The aside contains the bio section with the image, name/title and p -->
+    <aside class="bio">
+        <div class="simon">
+            <img class="bio-1" src="images/simon.jpg" alt="portriat of simon">
+            <h2 class="bio-2">Dijanelle Simon</h2>
+            <h2 class="bio-3">SA President</h2>
+            <p class="bio-4">"Only with increased capacity can we expand and create a more 
+                inclusive program that attracts a greater number of students 
+                to participate in physical and social activity. The Students' 
+                Association is committed to and focused on programming that 
+                results in our students taking person ownership for their health."
+            </p>    
+        </div> 
+    </aside>
+    <!-- this div contains the discover-2 content with the pub image, copy and button for the second disvocer content -->
+    <div class="discover-2">
+        <div class="pub-img">
+            <picture>
+                <source srcset="images/entertainment-325_x_200.jpg 325w,
+                images/entertainment-360_x_200.jpg 360w,
+                images/entertainment-411_x_200.jpg 411w"
+                media="(min-width: 200px)">
+
+                <source srcset="images/entertainment-700_x_200.jpg 700w,
+                images/entertainment-750_x_200.jpg 750w,
+                images/entertainment-800_x_200.jpg 800w"
+                media="(min-width: 700px)">
+
+                <source srcset="images/entertainment-813_x_337.jpg 813w,
+                images/entertainment-981_x_407.jpg 981w"
+                media="(min-width: 1000px)">
+        
+
+                <img src="images/entertainment.jpg" alt="pub">
+            </picture>
+        </div> 
+        <div class="copy-pub">
+            <h1>Discover.</h1>
+            <h2>The entertainment</h2>
+            <p>at Algonquin College is endless. We currently have the Algonquin 
+                Commons Theatre where we host a variety of events. Now with the 
+                coming of the ARC facility, not only will it be providing more space 
+                for the students to study, but it will also be bringing in more room 
+                for late-night entertainment.</p>
+            <div class="btn-more">
+                <div class="btn more-btn">
+                    <a href="about.html">Learn More</a>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <!-- *Same across all pages* Footer with an h1 and a div containing all the social media icons. another div with the back to top arrow(an href with an image and text inside-->
+    <footer>
+        <h1 class="follow">Follow us</h1>
+        <div class="social">
+            <img src="images/icons/facebook.svg" alt="facebook">
+            <img src="images/icons/instagram.svg" alt="instagram">
+            <img src="images/icons/twitter.svg" alt="twitter">
+            <img src="images/icons/youtube.svg" alt="youtube">
+        </div>
+        <div class="top-arrow">
+            <a href="#nav-logo">
+                <img src="images/icons/arrow.svg" alt="arrow">
+                back to top
+            </a> 
+        </div>
+    </footer>
+</body>
+</html>

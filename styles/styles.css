@@ -528,7 +528,6 @@ footer .social img {
 /* DESKTOP VIEW */
 @media (min-width: 950px) {
     
-    
     .lg-logo .logo-image {
         display: none;
     }
@@ -641,6 +640,24 @@ footer .social img {
         margin: 0 0 0 20px; 
     }
 
+
+    .info-design {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .design-img {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+        padding: 0 0 0 20px; 
+    }
+
+    .design-grid {
+        grid-column: 1 / span 1;
+        padding: 0 20px 0 0;
+    }
+
     h2.portfolio {
         padding: 0px;
     }
@@ -654,10 +671,13 @@ footer .social img {
     }
 
     .contact-img {
-        grid-column: 1 / span 1;
-        margin-right: 20px;
-        height: 50%;
-        width: 50%;
+        background-image: url('../images/contact-lg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contact-img img {
+        display: none;
     }
 
     .contact-box {
